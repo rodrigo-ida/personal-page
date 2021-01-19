@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route } from "react-router-dom";
+import styled from "styled-components";
+import "./App.css";
+import Navbar from "./components/sidebar/navbar";
+import Home from "./pages/home/home";
 
-function App() {
+// function App() {
+//   return (
+//     <div className="App">
+//       <Navbar />
+//       <Route path="/" exact component={Home} />
+//     </div>
+//   );
+// }
+
+const StyledApp = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+`;
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StyledApp>
+        <Navbar />
+        <Route path="/" exact component={Home} />
+      </StyledApp>
     </div>
   );
-}
-
+};
 export default App;

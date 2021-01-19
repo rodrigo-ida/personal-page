@@ -1,0 +1,28 @@
+<svg width="1360" height="700" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_6">
+   <stop offset="0.125" stop-color="#e1cfbd"/>
+   <stop offset="1" stop-color="#1e3042"/>
+  </radialGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="#142333" id="canvas_background" height="702" width="1362" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse fill-opacity="0.93" stroke="#000" ry="530" rx="526.00002" id="svg_12" cy="305.50001" cx="1149.49998" stroke-width="0" fill="#142333"/>
+  <ellipse fill-opacity="0.93" stroke="#000" ry="430" rx="430" id="svg_20" cy="319.50001" cx="1092.5" stroke-width="0" fill="#2b3a4b"/>
+  <ellipse fill-opacity="0.93" stroke="#000" ry="380" rx="380" id="svg_19" cy="311.50001" cx="1110.5" stroke-width="0" fill="#364454"/>
+  <ellipse fill-opacity="0.93" stroke="#000" ry="330" rx="330" id="svg_10" cy="307.50001" cx="1132.5" stroke-width="0" fill="#404e5c"/>
+  <ellipse fill-opacity="0.93" opacity="0.74" stroke="#000" ry="480" rx="480" id="svg_11" cy="314.50001" cx="1054.5" stroke-width="0" fill="url(#svg_6)"/>
+  <ellipse stroke="#000" ry="280" rx="280" id="svg_2" cy="307.50001" cx="1166.5" stroke-width="0" fill="#4a5765"/>
+  <ellipse stroke="#000" ry="280" rx="280" id="svg_18" cy="307.50001" cx="1166.5" stroke-width="0" fill="#4a5765"/>
+  <ellipse stroke="#000" ry="280" rx="280" id="svg_1" cy="299.50001" cx="1144.5" stroke-width="0" fill="#fff"/>
+  <ellipse stroke="#000" ry="26.5" rx="25.5" id="svg_15" cy="167.5" cx="1173.5" stroke-opacity="null" stroke-width="0" fill="#ededed"/>
+  <ellipse stroke="#000" ry="20.5" rx="20.5" id="svg_16" cy="251.5" cx="1301.5" stroke-opacity="null" stroke-width="0" fill="#ededed"/>
+  <ellipse stroke="#000" ry="17" rx="15" id="svg_17" cy="414" cx="1232" stroke-opacity="null" stroke-width="0" fill="#ededed"/>
+  <ellipse stroke="#000" ry="49" rx="50" id="svg_13" cy="258" cx="1084" stroke-opacity="null" stroke-width="0" fill="#ededed"/>
+ </g>
+</svg>
