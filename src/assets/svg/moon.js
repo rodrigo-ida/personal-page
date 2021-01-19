@@ -26,13 +26,18 @@ to{transform: translateX(600px)}
 
 const fallingStarAnimation = keyframes`
 
-/* from{transform: translate3d(0px, 0px, 0px)}
-to{transform: translate3d(700px,100px,200px)} */
 from{stroke-dashoffset: 0px;}
 to{  stroke-dashoffset: -820px;}
 
 
-`
+`;
+const starAnimation = keyframes`
+
+from{opacity: 1;}
+to{  opacity: 0;}
+
+
+`;
 
 const Primeiro = styled(svgConfig)`
   top: 0;
@@ -42,46 +47,67 @@ const Primeiro = styled(svgConfig)`
   position: absolute;
   z-index: -1;
 
-  .orbit {
-    animation: ${glowing} 3s ease-in-out infinite alternate;
+  #moon_group {
+    .orbit {
+      animation: ${glowing} 3s ease-in-out infinite alternate;
+    }
   }
+  #clouds_group {
+    #cloud1 {
+      ellipse {
+        animation: ${cloudAnimation1} 120s ease alternate infinite;
+      }
+    }
 
-  #nuvem1 {
-    ellipse {
-      animation: ${cloudAnimation1} 120s ease alternate infinite;
+    #cloud2 {
+      ellipse {
+        animation: ${cloudAnimation2} 120s ease alternate infinite;
+      }
+    }
+    #cloud3 {
+      ellipse {
+        animation: ${cloudAnimation3} 120s ease alternate infinite;
+      }
     }
   }
 
-  #nuvem2 {
-    ellipse {
-      animation: ${cloudAnimation2} 120s ease alternate infinite;
+  #falling-stars_group {
+    #falling-star {
+      animation: ${fallingStarAnimation} 1s 2s ease;
+      stroke-dasharray: 112px 1753px;
+      stroke-dashoffset: 73px;
+    }
+    #falling-star2 {
+      animation: ${fallingStarAnimation} 1s 4s ease;
+      stroke-dasharray: 112px 1753px;
+      stroke-dashoffset: 93px;
+    }
+    #falling-star3 {
+      animation: ${fallingStarAnimation} 1s 5s ease;
+      stroke-dasharray: 112px 1753px;
+      stroke-dashoffset: 93px;
+    }
+    #falling-star4 {
+      animation: ${fallingStarAnimation} 1s 7s ease;
+      stroke-dasharray: 112px 1753px;
+      stroke-dashoffset: 93px;
     }
   }
-  #nuvem3 {
-    ellipse {
-      animation: ${cloudAnimation3} 120s ease alternate infinite;
+
+  #stars_group {
+    #star1 {
+      animation: ${starAnimation} 2s alternate infinite ease-in-out;
     }
-  }
+    #star2 {
+      animation: ${starAnimation} 2s 0.3s alternate infinite ease-in-out;
+    }
+    #star-name {
+      animation: ${starAnimation} 2s 0.3s alternate infinite ease-in-out;
+    }
 
-  #falling-star{
-    animation: ${fallingStarAnimation} 1s 3s ease; 
-    stroke-dasharray: 112px 1753px;
-    stroke-dashoffset: 73px;
-
-  }
-  #falling-star2{
-
-    animation: ${fallingStarAnimation} 1s 2s ease; 
-    stroke-dasharray: 112px 1753px;
-    stroke-dashoffset: 93px;
-
-  }
-  #falling-star3{
-
-    animation: ${fallingStarAnimation} 1s 1.3s ease; 
-    stroke-dasharray: 112px 1753px;
-    stroke-dashoffset: 93px;
-
+    #star4 {
+      animation: ${starAnimation} 2s 0.6s alternate infinite ease-in-out;
+    }
   }
 `;
 
@@ -111,112 +137,133 @@ const Segundo = () => (
         <stop stopColor="#eadede" offset="0.4375" />
         <stop stopColor="#152121" offset="0.81641" />
       </radialGradient>
-      <filter height="200%" width="200%" y="-50%" x="-50%" id="falling-star1">
-   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
-  </filter>
     </defs>
-    <g>
-      <title>background</title>
+    <g id="background_group">
       <rect
         fill="#142333"
         id="canvas_background"
         height="702"
         width="1362"
-        y="-1"
-        x="-1"
+        y="0"
+        x="0"
       />
     </g>
-    <g>
-      <title>Layer 1</title>
-      <g id="svg_1">
-        <ellipse
-          id="orbit-3"
-          ry="430"
-          rx="430"
-          cy="317.50001"
-          cx="1086.5"
-          fill="white"
-          className="orbit"
-        />
-        <ellipse
-          id="orbit-2"
-          ry="380"
-          rx="380"
-          cy="309.50001"
-          cx="1104.5"
-          fill="white"
-          className="orbit"
-        />
-        <ellipse
-          id="orbit-1"
-          ry="330"
-          rx="330"
-          cy="305.50001"
-          cx="1126.5"
-          fill="white"
-          className="orbit"
-        />
-        <ellipse
-          id="orbit-4"
-          ry="480"
-          rx="480"
-          cy="312.50001"
-          cx="1048.5"
-          fill="url(#svg_6)"
-          className="orbit"
-          opacity="0.74"
-        />
-        <ellipse
-          id="moon"
-          ry="280"
-          rx="280"
-          cy="297.50001"
-          cx="1138.5"
-          fill="#fff"
-        />
-        <ellipse
-          id="moon-cratery"
-          ry="26.5"
-          rx="25.5"
-          cy="165.5"
-          cx="1167.5"
-          fill="#ededed"
-        />
-        <ellipse
-          id="moon-cratery1"
-          ry="20.5"
-          rx="20.5"
-          cy="249.5"
-          cx="1295.5"
-          fill="#ededed"
-        />
-        <ellipse
-          id="moon-cratery3"
-          ry="17"
-          rx="15"
-          cy="412"
-          cx="1226"
-          fill="#ededed"
-        />
-        <ellipse
-          id="moon-cratery4"
-          ry="49"
-          rx="50"
-          cy="256"
-          cx="1078"
-          fill="#ededed"
-        />
-      </g>
-{/* ---------------------------------------------------------------------------------- */}
-<path id="falling-star3" d="m19.12413,214.39162c282.83589,-139.90815 634.11605,-184.19562 651.22712,-183.18908c17.11107,1.00653 78.50961,3.0196 77.50307,2.01306"  stroke="white" fill="none"/>
-<path id="falling-star2" d="m27.1764,325.11029c382.4827,-170.10414 706.58645,-89.58147 705.57992,-90.58801c1.00653,1.00654 24.1568,3.0196 50.32667,20.13067"  strokeWidth="null" stroke="white" fill="none"/>
-<g id="falling-star_group">
-   <path filter="url(#falling-star1)" id="falling-star" d="m22.14373,277.80322c441.86817,-242.57455 761.94579,-255.65949 761.94579,-255.65949" opacity="0.5" strokeOpacity="null" stroke="white" fill="none"/>
-  </g>
+    <title>Layer 1</title>
+    <g id="moon_group">
+      <ellipse
+        id="orbit-3"
+        ry="430"
+        rx="430"
+        cy="317.50001"
+        cx="1086.5"
+        fill="white"
+        className="orbit"
+      />
+      <ellipse
+        id="orbit-2"
+        ry="380"
+        rx="380"
+        cy="309.50001"
+        cx="1104.5"
+        fill="white"
+        className="orbit"
+      />
+      <ellipse
+        id="orbit-1"
+        ry="330"
+        rx="330"
+        cy="305.50001"
+        cx="1126.5"
+        fill="white"
+        className="orbit"
+      />
+      <ellipse
+        id="orbit-4"
+        ry="480"
+        rx="480"
+        cy="312.50001"
+        cx="1048.5"
+        fill="url(#svg_6)"
+        className="orbit"
+        opacity="0.74"
+      />
+      <ellipse
+        id="moon"
+        ry="280"
+        rx="280"
+        cy="297.50001"
+        cx="1138.5"
+        fill="#fff"
+      />
+      <ellipse
+        id="moon-cratery"
+        ry="26.5"
+        rx="25.5"
+        cy="165.5"
+        cx="1167.5"
+        fill="#ededed"
+      />
+      <ellipse
+        id="moon-cratery1"
+        ry="20.5"
+        rx="20.5"
+        cy="249.5"
+        cx="1295.5"
+        fill="#ededed"
+      />
+      <ellipse
+        id="moon-cratery3"
+        ry="17"
+        rx="15"
+        cy="412"
+        cx="1226"
+        fill="#ededed"
+      />
+      <ellipse
+        id="moon-cratery4"
+        ry="49"
+        rx="50"
+        cy="256"
+        cx="1078"
+        fill="#ededed"
+      />
+    </g>
+    <g id="falling-stars_group">
+      <path
+        id="falling-star4"
+        d="m39,377c394,-284 865,-253 865,-253c0,0 37,2 37,2"
+        stroke-width="1"
+        stroke="white"
+        fill="none"
+      />
+
+      <path
+        id="falling-star2"
+        d="m27.1764,325.11029c382.4827,-170.10414 706.58645,-89.58147 705.57992,-90.58801c1.00653,1.00654 24.1568,3.0196 50.32667,20.13067"
+        strokeWidth="null"
+        stroke="white"
+        fill="none"
+      />
+      <path
+        id="falling-star3"
+        d="m19.12413,214.39162c282.83589,-139.90815 634.11605,-184.19562 651.22712,-183.18908c17.11107,1.00653 78.50961,3.0196 77.50307,2.01306"
+        stroke="white"
+        fill="none"
+      />
+      <path
+        id="falling-star"
+        d="m22.14373,277.80322c441.86817,-242.57455 761.94579,-255.65949 761.94579,-255.65949"
+        opacity="0.5"
+        strokeOpacity="null"
+        stroke="white"
+        fill="none"
+      />
+    </g>
+    <g id="stars_group">
       <ellipse
         ry="2"
         rx="1.5"
-        id="svg_33"
+        id="star1"
         cy="76"
         cx="178.5"
         fillOpacity="null"
@@ -228,13 +275,9 @@ const Segundo = () => (
       <ellipse
         ry="0.5"
         rx="0.5"
-        id="svg_39"
+        id="star2"
         cy="309.5"
         cx="401.5"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
         fill="#ffffff"
       />
       <ellipse
@@ -251,11 +294,11 @@ const Segundo = () => (
         fill="#ffffff"
       />
       <ellipse
-        ry="4.5"
-        rx="4.5"
-        id="svg_41"
-        cy="259.5"
-        cx="448.5"
+        ry="2.5"
+        rx="2.5"
+        id="star-name"
+        cy="226"
+        cx="355"
         fillOpacity="null"
         strokeOpacity="null"
         strokeWidth="0"
@@ -316,7 +359,7 @@ const Segundo = () => (
         filter="url(#svg_49_blur)"
         ry="3.5"
         rx="3"
-        id="svg_49"
+        id="star4"
         cy="36.5"
         cx="363"
         fillOpacity="null"
@@ -381,17 +424,9 @@ const Segundo = () => (
         stroke="#000"
         fill="#ffffff"
       />
-      <ellipse
-        rx="2.5"
-        id="svg_86"
-        cy="91"
-        cx="714.5"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#9b8b8b"
-      />
-      <g id="nuvem1">
+    </g>
+    <g id="clouds_group">
+      <g id="cloud1">
         <ellipse
           ry="25.5"
           rx="34.5"
@@ -425,7 +460,7 @@ const Segundo = () => (
           fill="url(#svg_9)"
         />
       </g>
-      <g id="nuvem2">
+      <g id="cloud2">
         <ellipse
           rx="2.5"
           id="svg_56"
@@ -470,7 +505,7 @@ const Segundo = () => (
           fill="#9b8b8b"
         />
       </g>
-      <g id="nuvem3">
+      <g id="cloud3">
         <ellipse
           stroke="#000"
           ry="44"
