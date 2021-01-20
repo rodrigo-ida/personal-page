@@ -1,7 +1,5 @@
 import svgConfig from "../../../util/genericSvgConfig";
 import styled, { keyframes } from "styled-components";
-import BigCloud from "./big-cloud1";
-import BigCloud2 from './big-cloud2'
 
 const glowing = keyframes`
 
@@ -9,148 +7,21 @@ from{opacity: 10%}
 to{opacity: 50%}
 `;
 
-const cloudAnimation1 = keyframes`
-from{transform: translateX(0px)}
-to{transform: translateX(300px)}
-
-
-`;
-
-const cloudAnimation2 = keyframes`
-from{transform: translateX(0px)}
-to{transform: translateX(-300px)}
-`;
-
-const cloudAnimation3 = keyframes`
-from{transform: translateX(0px)}
-to{transform: translateX(600px)}
-`;
-
-const fallingStarAnimation = keyframes`
-
-from{stroke-dashoffset: 0px;}
-to{  stroke-dashoffset: -820px;}
-
-
-`;
-const starAnimation = keyframes`
-
-from{opacity: 1;}
-to{  opacity: 0;}
-
-
-`;
-
-const Primeiro = styled(svgConfig)`
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-
-  #moon_group {
-    .orbit {
+const MoonSvg = styled(svgConfig)`
+.orbit {
       animation: ${glowing} 3s ease-in-out infinite alternate;
     }
-  }
-  #clouds_group {
-    #big-cloud1 {
-      animation: ${cloudAnimation1} 120s ease alternate infinite;
 
-    }
-    #big-cloud2 {
-      ellipse{
-      transform: translate(50px, -80px);
-      }
-    }
-  }
+`
 
-  #falling-stars_group {
-    #falling-star {
-      animation: ${fallingStarAnimation} 1s 2s ease;
-      stroke-dasharray: 112px 1753px;
-      stroke-dashoffset: 73px;
-    }
-    #falling-star2 {
-      animation: ${fallingStarAnimation} 1s 4s ease;
-      stroke-dasharray: 112px 1753px;
-      stroke-dashoffset: 93px;
-    }
-    #falling-star3 {
-      animation: ${fallingStarAnimation} 1s 5s ease;
-      stroke-dasharray: 112px 1753px;
-      stroke-dashoffset: 93px;
-    }
-    #falling-star4 {
-      animation: ${fallingStarAnimation} 1s 7s ease;
-      stroke-dasharray: 112px 1753px;
-      stroke-dashoffset: 93px;
-    }
-  }
-
-  #stars_group {
-    #star1 {
-      animation: ${starAnimation} 2s alternate infinite ease-in-out;
-    }
-    #star2 {
-      animation: ${starAnimation} 2s 0.3s alternate infinite ease-in-out;
-    }
-    #star-name {
-      animation: ${starAnimation} 2s 0.3s alternate infinite ease-in-out;
-    }
-
-    #star4 {
-      animation: ${starAnimation} 2s 0.6s alternate infinite ease-in-out;
-    }
-  }
-`;
-
-const Segundo = () => (
-  <Primeiro>
-    <defs>
-      <filter id="svg_40_blur">
-        <feGaussianBlur stdDeviation="1.6" />
-      </filter>
-      <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_49_blur">
-        <feGaussianBlur stdDeviation="2.7" />
-      </filter>
-      <filter id="svg_42_blur">
-        <feGaussianBlur stdDeviation="1.7" />
-      </filter>
+const Moon = ()=> (
+    <MoonSvg>
+        <defs>
       <filter id="moon-orbit_blur">
         <feGaussianBlur stdDeviation="20" />
       </filter>
-      <filter id="clouds_blur">
-        <feGaussianBlur stdDeviation="4" />
-      </filter>
-      <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_6">
-        <stop offset="0.125" stopColor="#e1cfbd" />
-        <stop offset="1" stopColor="#1e3042" />
-      </radialGradient>
-      <radialGradient
-        id="svg_9"
-        spreadMethod="pad"
-        r="1.16247"
-        cx="0.5"
-        cy="0.5"
-      >
-        <stop stopColor="#eadede" offset="0.4375" />
-        <stop stopColor="#152121" offset="0.81641" />
-      </radialGradient>
     </defs>
-    <g id="background_group">
-      <rect
-        fill="#142333"
-        id="canvas_background"
-        height="702"
-        width="1362"
-        y="0"
-        x="0"
-      />
-    </g>
-    <title>Layer 1</title>
-    <g id="moon_group">
+        <g id="moon_group">
       <ellipse
         id="orbit-1"
         ry="330"
@@ -160,7 +31,6 @@ const Segundo = () => (
         fill="white"
         className="orbit"
         filter="url(#moon-orbit_blur)"
-        // filter="url(#svg_49_blur)"
       />
 
       <ellipse
@@ -236,208 +106,8 @@ const Segundo = () => (
         fill="#ededed"
       />
     </g>
-    <g id="falling-stars_group">
-      <path
-        id="falling-star4"
-        d="m39,377c394,-284 865,-253 865,-253c0,0 37,2 37,2"
-        stroke-width="1"
-        stroke="white"
-        fill="none"
-      />
+    </MoonSvg>
+)
 
-      <path
-        id="falling-star2"
-        d="m27.1764,325.11029c382.4827,-170.10414 706.58645,-89.58147 705.57992,-90.58801c1.00653,1.00654 24.1568,3.0196 50.32667,20.13067"
-        strokeWidth="null"
-        stroke="white"
-        fill="none"
-      />
-      <path
-        id="falling-star3"
-        d="m19.12413,214.39162c282.83589,-139.90815 634.11605,-184.19562 651.22712,-183.18908c17.11107,1.00653 78.50961,3.0196 77.50307,2.01306"
-        stroke="white"
-        fill="none"
-      />
-      <path
-        id="falling-star"
-        d="m22.14373,277.80322c441.86817,-242.57455 761.94579,-255.65949 761.94579,-255.65949"
-        opacity="0.5"
-        strokeOpacity="null"
-        stroke="white"
-        fill="none"
-      />
-    </g>
-    <g id="stars_group">
-      <ellipse
-        ry="2"
-        rx="1.5"
-        id="star1"
-        cy="76"
-        cx="178.5"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        ry="0.5"
-        rx="0.5"
-        id="star2"
-        cy="309.5"
-        cx="401.5"
-        fill="#ffffff"
-      />
-      <ellipse
-        filter="url(#svg_40_blur)"
-        ry="1"
-        rx="1"
-        id="svg_40"
-        cy="274"
-        cx="265"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        ry="2.5"
-        rx="2.5"
-        id="star-name"
-        cy="226"
-        cx="355"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        filter="url(#svg_42_blur)"
-        ry="2.5"
-        rx="2.5"
-        id="svg_42"
-        cy="119.5"
-        cx="511.5"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        ry="2"
-        rx="2.5"
-        id="svg_43"
-        cy="138"
-        cx="366.5"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
 
-      <ellipse
-        ry="1"
-        rx="2"
-        id="svg_47"
-        cy="130"
-        cx="43"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        ry="1"
-        rx="1"
-        id="svg_48"
-        cy="185"
-        cx="189"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        filter="url(#svg_49_blur)"
-        ry="3.5"
-        rx="3"
-        id="star4"
-        cy="36.5"
-        cx="363"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        ry="0.5"
-        id="svg_51"
-        cy="445.5"
-        cx="180"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        ry="0.5"
-        id="svg_52"
-        cy="418.5"
-        cx="162"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        ry="0.5"
-        rx="0.5"
-        id="svg_53"
-        cy="440.5"
-        cx="113.5"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        rx="0.5"
-        id="svg_54"
-        cy="465"
-        cx="263.5"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-      <ellipse
-        ry="0.5"
-        rx="1"
-        id="svg_58"
-        cy="382.5"
-        cx="421"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="0"
-        stroke="#000"
-        fill="#ffffff"
-      />
-    </g>
-    <g id="clouds_group">
-      <BigCloud/>
-      <BigCloud2/>
-    </g>
-  </Primeiro>
-);
-
-export default Segundo;
+export default Moon

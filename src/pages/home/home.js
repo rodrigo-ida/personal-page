@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Moon from "../../assets/svg/moon/moon";
+import NightSky from "../../assets/svg/moon/nightSky";
 
 const StyledButton = styled.button`
   background-color: transparent;
@@ -77,7 +77,7 @@ const Home = () => {
         <StyledButton>Contate-me</StyledButton>
       </div>
       <span className="tags">&lt;/body&gt; </span>
-      <Moon />
+      <NightSky />
     </StyledMain>
   );
 };
