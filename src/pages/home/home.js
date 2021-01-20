@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Moon from "../../assets/svg/moon";
+import Moon from "../../assets/svg/moon/moon";
 
 const StyledButton = styled.button`
   background-color: transparent;
@@ -54,8 +54,7 @@ const StyledMain = styled.main`
 
     color: white;
     font-size: 20px;
-    /* padding: 20px 0;
-    padding-left: 10px; */
+
     font-weight: bold;
 
     }

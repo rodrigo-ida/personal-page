@@ -3,6 +3,7 @@ import styled from "styled-components";
 import "./App.css";
 import Navbar from "./components/sidebar/navbar";
 import Home from "./pages/home/home";
+import About from "./pages/about/about";
 
 // function App() {
 //   return (
@@ -24,6 +25,7 @@ const App = () => {
     <div className="App">
       <StyledApp>
         <Navbar />
+        <Route path="/about" exact component={About} />
         <Route path="/" exact component={Home} />
       </StyledApp>
     </div>

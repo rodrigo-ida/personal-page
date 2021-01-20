@@ -1,0 +1,24 @@
+<svg width="1300" height="700" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_1_blur">
+   <feGaussianBlur stdDeviation="3.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_2_blur">
+   <feGaussianBlur stdDeviation="2.2" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="#ffa851" id="canvas_background" height="702" width="1302" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse filter="url(#svg_2_blur)" opacity="0.33" ry="280" rx="280" id="svg_2" cy="222.5" cx="935" stroke-width="0" stroke="#000" fill="#ffc33e"/>
+  <ellipse filter="url(#svg_1_blur)" ry="236.5" rx="234" id="svg_1" cy="226.5" cx="934" stroke-width="0" stroke="#000" fill="#ffc33e"/>
+  <ellipse filter="url(#svg_2_blur)" opacity="0.33" ry="350" rx="350" id="svg_9" cy="221.5" cx="935" stroke-width="0" stroke="#000" fill="#ffc33e"/>
+ </g>
+</svg>

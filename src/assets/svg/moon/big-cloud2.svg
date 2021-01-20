@@ -1,0 +1,36 @@
+<svg width="1360" height="700" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <radialGradient gradientTransform="translate(0,0.03103448275862064) scale(1,0.9379310344827587)" r="1.23943" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_11">
+   <stop offset="0" stop-color="#9b8b8b"/>
+   <stop offset="1" stop-opacity="0.99609" stop-color="#5a5e5e"/>
+  </radialGradient>
+  <radialGradient gradientTransform="translate(0,0.03117187500000003) scale(1,0.94)" r="0.88364" cy="0.51953" cx="0.05469" spreadMethod="pad" id="svg_25">
+   <stop offset="0" stop-color="#9b8b8b"/>
+   <stop offset="1" stop-opacity="0.99609" stop-color="#5a5e5e"/>
+  </radialGradient>
+  <radialGradient gradientTransform="translate(0,0.030000000000000027) scale(1,0.94)" r="5.65685" cy="0.5" cx="0.72656" spreadMethod="pad" id="svg_30">
+   <stop offset="0" stop-color="#9b8b8b"/>
+   <stop offset="1" stop-opacity="0.99609" stop-color="#5a5e5e"/>
+  </radialGradient>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_31_blur">
+   <feGaussianBlur stdDeviation="10" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="1362" height="702" id="canvas_background" fill="#142333"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null" id="svg_32">
+   <ellipse stroke="url(#gradbox_stroke)" fill-opacity="0.57" opacity="0.68" filter="url(#svg_31_blur)" ry="71.33346" rx="180.28735" id="svg_12" cy="603.33381" cx="765.11762" stroke-opacity="null" stroke-width="0" fill="url(#svg_11)"/>
+   <ellipse stroke="url(#gradbox_stroke)" opacity="0.68" filter="url(#svg_31_blur)" ry="71.33346" rx="180.28735" id="svg_14" cy="596.66713" cx="600.95353" stroke-opacity="null" stroke-width="0" fill="url(#svg_30)"/>
+   <ellipse stroke="url(#gradbox_stroke)" opacity="0.68" filter="url(#svg_31_blur)" ry="71.33346" rx="180.28735" id="svg_22" cy="592.66712" cx="955.66522" stroke-opacity="null" stroke-width="0" fill="url(#svg_25)"/>
+   <ellipse stroke="url(#gradbox_stroke)" transform="matrix(2.19443030265975,0.06172190006469991,-0.13570314135733663,0.9980933859376101,-142.70306695324956,-18.028110261834172) " opacity="0.68" filter="url(#svg_31_blur)" ry="71.33346" rx="82.00015" id="svg_23" cy="547.35948" cx="438.19053" stroke-opacity="null" stroke-width="0" fill="url(#svg_25)"/>
+   <ellipse stroke="url(#gradbox_stroke)" opacity="0.68" filter="url(#svg_31_blur)" ry="71.33346" rx="180.28735" id="svg_24" cy="551.33371" cx="958.59673" stroke-opacity="null" stroke-width="0" fill="url(#svg_25)"/>
+   <ellipse stroke="url(#gradbox_stroke)" transform="matrix(2.19443030265975,0.06172190006469991,-0.13570314135733663,0.9980933859376101,-136.6818130929417,-18.68488375291264) " opacity="0.68" filter="url(#svg_31_blur)" ry="71.33346" rx="82.00015" id="svg_27" cy="591.35956" cx="450.19055" stroke-opacity="null" stroke-width="0" fill="url(#svg_25)"/>
+   <ellipse stroke="url(#gradbox_stroke)" filter="url(#svg_31_blur)" transform="matrix(2.19443030265975,0.06172190006469991,-0.13570314135733663,0.9980933859376101,-139.0758703162938,-28.768214387321507) " opacity="0.68" ry="71.33346" rx="82.00015" id="svg_31" cy="568.69285" cx="612.85751" stroke-opacity="null" stroke-width="0" fill="url(#svg_25)"/>
+  </g>
+ </g>
+</svg>

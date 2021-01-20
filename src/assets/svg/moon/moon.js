@@ -1,9 +1,11 @@
-import svgConfig from "../../util/genericSvgConfig";
+import svgConfig from "../../../util/genericSvgConfig";
 import styled, { keyframes } from "styled-components";
+import BigCloud from "./big-cloud1";
+import BigCloud2 from './big-cloud2'
 
 const glowing = keyframes`
 
-from{opacity: 0}
+from{opacity: 10%}
 to{opacity: 50%}
 `;
 
@@ -53,20 +55,13 @@ const Primeiro = styled(svgConfig)`
     }
   }
   #clouds_group {
-    #cloud1 {
-      ellipse {
-        animation: ${cloudAnimation1} 120s ease alternate infinite;
-      }
-    }
+    #big-cloud1 {
+      animation: ${cloudAnimation1} 120s ease alternate infinite;
 
-    #cloud2 {
-      ellipse {
-        animation: ${cloudAnimation2} 120s ease alternate infinite;
-      }
     }
-    #cloud3 {
-      ellipse {
-        animation: ${cloudAnimation3} 120s ease alternate infinite;
+    #big-cloud2 {
+      ellipse{
+      transform: translate(50px, -80px);
       }
     }
   }
@@ -123,6 +118,12 @@ const Segundo = () => (
       <filter id="svg_42_blur">
         <feGaussianBlur stdDeviation="1.7" />
       </filter>
+      <filter id="moon-orbit_blur">
+        <feGaussianBlur stdDeviation="20" />
+      </filter>
+      <filter id="clouds_blur">
+        <feGaussianBlur stdDeviation="4" />
+      </filter>
       <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_6">
         <stop offset="0.125" stopColor="#e1cfbd" />
         <stop offset="1" stopColor="#1e3042" />
@@ -151,14 +152,17 @@ const Segundo = () => (
     <title>Layer 1</title>
     <g id="moon_group">
       <ellipse
-        id="orbit-3"
-        ry="430"
-        rx="430"
-        cy="317.50001"
-        cx="1086.5"
+        id="orbit-1"
+        ry="330"
+        rx="330"
+        cy="305.50001"
+        cx="1126.5"
         fill="white"
         className="orbit"
+        filter="url(#moon-orbit_blur)"
+        // filter="url(#svg_49_blur)"
       />
+
       <ellipse
         id="orbit-2"
         ry="380"
@@ -167,16 +171,19 @@ const Segundo = () => (
         cx="1104.5"
         fill="white"
         className="orbit"
+        filter="url(#moon-orbit_blur)"
       />
       <ellipse
-        id="orbit-1"
-        ry="330"
-        rx="330"
-        cy="305.50001"
-        cx="1126.5"
+        id="orbit-3"
+        ry="430"
+        rx="430"
+        cy="317.50001"
+        cx="1086.5"
         fill="white"
         className="orbit"
+        filter="url(#moon-orbit_blur)"
       />
+
       <ellipse
         id="orbit-4"
         ry="480"
@@ -186,6 +193,7 @@ const Segundo = () => (
         fill="url(#svg_6)"
         className="orbit"
         opacity="0.74"
+        filter="url(#moon-orbit_blur)"
       />
       <ellipse
         id="moon"
@@ -426,119 +434,8 @@ const Segundo = () => (
       />
     </g>
     <g id="clouds_group">
-      <g id="cloud1">
-        <ellipse
-          ry="25.5"
-          rx="34.5"
-          id="svg_50"
-          cy="64.5"
-          cx="463.5"
-          strokeOpacity="null"
-          strokeWidth="0"
-          stroke="#000"
-          fill="url(#svg_9)"
-        />
-        <ellipse
-          stroke="url(#gradbox_stroke)"
-          ry="39.5"
-          rx="42.5"
-          id="svg_55"
-          cy="66.5"
-          cx="504.5"
-          strokeWidth="0"
-          fill="url(#svg_9)"
-        />
-        <ellipse
-          stroke="#000"
-          ry="34.5"
-          rx="34.5"
-          id="svg_57"
-          cy="69.5"
-          cx="546.5"
-          strokeOpacity="null"
-          strokeWidth="0"
-          fill="url(#svg_9)"
-        />
-      </g>
-      <g id="cloud2">
-        <ellipse
-          rx="2.5"
-          id="svg_56"
-          cy="465"
-          cx="374.5"
-          fillOpacity="null"
-          strokeOpacity="null"
-          strokeWidth="0"
-          stroke="#000"
-          fill="#ffffff"
-        />
-        <ellipse
-          stroke="#000"
-          ry="44.5"
-          rx="54"
-          id="svg_71"
-          cy="452.5"
-          cx="418"
-          strokeOpacity="null"
-          strokeWidth="0"
-          fill="#9b8b8b"
-        />
-        <ellipse
-          stroke="url(#gradbox_stroke)"
-          ry="57.5"
-          rx="66"
-          id="svg_72"
-          cy="451.5"
-          cx="474"
-          strokeWidth="0"
-          fill="#9b8b8b"
-        />
-        <ellipse
-          stroke="#000"
-          ry="43"
-          rx="53"
-          id="svg_73"
-          cy="448"
-          cx="537"
-          strokeOpacity="null"
-          strokeWidth="0"
-          fill="#9b8b8b"
-        />
-      </g>
-      <g id="cloud3">
-        <ellipse
-          stroke="#000"
-          ry="44"
-          rx="64.5"
-          id="svg_87"
-          cy="98"
-          cx="747.5"
-          strokeOpacity="null"
-          strokeWidth="0"
-          fill="#9b8b8b"
-        />
-        <ellipse
-          stroke="url(#gradbox_stroke)"
-          ry="73.5"
-          rx="66"
-          id="svg_88"
-          cy="94.5"
-          cx="815"
-          strokeWidth="0"
-          fill="#9b8b8b"
-        />
-        <ellipse
-          stroke="#000"
-          ry="60.5"
-          rx="75.5"
-          id="svg_89"
-          cy="92.5"
-          cx="900.5"
-          strokeOpacity="null"
-          strokeWidth="0"
-          fill="#9b8b8b"
-        />
-      </g>
+      <BigCloud/>
+      <BigCloud2/>
     </g>
   </Primeiro>
 );
