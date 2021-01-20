@@ -43,14 +43,28 @@ const StyledMain = styled.main`
     flex-wrap: wrap;
     padding-left: 10px;
 
+    font-size: 12rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.6rem;
+    font-family: "futura_m";
+    font-weight: normal;
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+
     .first-line {
+      display: flex;
+      flex-direction: column;
       .letter-r {
         color: #fc0853;
         text-shadow: -1px 1px #08fdd9;
       }
+      .last-name{
+        /* padding-left: 100px; */
+      }
     }
 
     .second-line{
+      letter-spacing: 0.1em;
 
     color: white;
     font-size: 20px;
@@ -69,7 +83,8 @@ const Home = () => {
         <span className="tags">&lt;h1&gt; </span>
         <h1>
           <span className="first-line">
-            <span className="letter-r">R</span>odrigo Ida
+            <span><span className="letter-r">R</span>odrigo</span> 
+            <span className="last-name">Ida</span>
           </span>
           <span className="second-line">Desenvolvedor Front End.</span>
         </h1>

@@ -14,7 +14,7 @@ const Ranimation = keyframes`
 const StyledNavbar = styled.nav`
   width: 60px;
   height: 100vh;
-  background-color: black;
+  background-color: transparent;
 
   .first_list {
     .first {

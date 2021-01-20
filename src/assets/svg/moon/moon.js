@@ -30,7 +30,7 @@ const Moon = ()=> (
         cx="1126.5"
         fill="white"
         className="orbit"
-        filter="url(#moon-orbit_blur)"
+        // filter="url(#moon-orbit_blur)"
       />
 
       <ellipse
@@ -41,7 +41,7 @@ const Moon = ()=> (
         cx="1104.5"
         fill="white"
         className="orbit"
-        filter="url(#moon-orbit_blur)"
+        // filter="url(#moon-orbit_blur)"
       />
       <ellipse
         id="orbit-3"
@@ -51,7 +51,7 @@ const Moon = ()=> (
         cx="1086.5"
         fill="white"
         className="orbit"
-        filter="url(#moon-orbit_blur)"
+        // filter="url(#moon-orbit_blur)"
       />
 
       <ellipse
@@ -63,7 +63,7 @@ const Moon = ()=> (
         fill="url(#svg_6)"
         className="orbit"
         opacity="0.74"
-        filter="url(#moon-orbit_blur)"
+        // filter="url(#moon-orbit_blur)"
       />
       <ellipse
         id="moon"

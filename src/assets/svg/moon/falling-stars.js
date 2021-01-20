@@ -17,22 +17,22 @@ const FallingStarsSvg = styled(svgConfig)`
     #falling-star {
       animation: ${fallingStarAnimation} 1s 2s ease;
       stroke-dasharray: 112px 1753px;
-      stroke-dashoffset: 73px;
+      stroke-dashoffset:130px;
     }
     #falling-star2 {
       animation: ${fallingStarAnimation} 1s 4s ease;
       stroke-dasharray: 112px 1753px;
-      stroke-dashoffset: 93px;
+      stroke-dashoffset:130px;
     }
     #falling-star3 {
       animation: ${fallingStarAnimation} 1s 5s ease;
       stroke-dasharray: 112px 1753px;
-      stroke-dashoffset: 93px;
+      stroke-dashoffset:130px;
     }
     #falling-star4 {
       animation: ${fallingStarAnimation} 1s 7s ease;
       stroke-dasharray: 112px 1753px;
-      stroke-dashoffset: 93px;
+      stroke-dashoffset:130px;
     }
   }
 
