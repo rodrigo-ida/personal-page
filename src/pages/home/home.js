@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import NightSky from "../../assets/svg/moon/nightSky";
+import {motion} from 'framer-motion'
+
+
 
 const StyledButton = styled.button`
   background-color: transparent;
@@ -14,7 +17,7 @@ const StyledButton = styled.button`
 const StyledMain = styled.main`
   background-color: transparent;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -42,12 +45,11 @@ const StyledMain = styled.main`
     flex-direction: column;
     flex-wrap: wrap;
     padding-left: 10px;
-
     font-size: 12rem;
     line-height: 1;
     letter-spacing: 0.1em;
     margin-bottom: 1.6rem;
-    font-family: "futura_m";
+    /* font-family: "futura_m"; */
     font-weight: normal;
     text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
 
@@ -58,22 +60,35 @@ const StyledMain = styled.main`
         color: #fc0853;
         text-shadow: -1px 1px #08fdd9;
       }
-      .last-name{
-        /* padding-left: 100px; */
-      }
     }
 
-    .second-line{
+    .second-line {
       letter-spacing: 0.1em;
-
-    color: white;
-    font-size: 20px;
-
-    font-weight: bold;
-
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
     }
   }
 `;
+
+
+const letterWithHoverGenerator = (letter) => {
+  const letterSeparator = letter.split('')
+
+
+  const letterWithHover = letterSeparator.map(e => (
+    <motion.span 
+    whileHover={{color: 'rgb(30,57,180)'}}
+  >{e}</motion.span>
+  ))
+  
+
+  return letterWithHover;
+};
+console.log(letterWithHoverGenerator('rodrigo'));
+const allLettersWithHover = letterWithHoverGenerator('rodrigo')
+
+
 
 const Home = () => {
   return (
@@ -83,17 +98,22 @@ const Home = () => {
         <span className="tags">&lt;h1&gt; </span>
         <h1>
           <span className="first-line">
-            <span><span className="letter-r">R</span>odrigo</span> 
+            <span>
+              <span className="letter-r">R</span>odrigo
+            </span>
             <span className="last-name">Ida</span>
           </span>
-          <span className="second-line">Desenvolvedor Front End.</span>
+          <span className="second-line"
+          >{allLettersWithHover}</span>
         </h1>
         <span className="tags">&lt;/h1&gt; </span>
         <StyledButton>Contate-me</StyledButton>
       </div>
       <span className="tags">&lt;/body&gt; </span>
       <NightSky />
+
     </StyledMain>
+
   );
 };
 

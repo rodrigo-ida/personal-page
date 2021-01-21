@@ -20,7 +20,7 @@ const starsGenerator = (quantity) => {
       rx={"1."+getRandomInt(1, 9)}
       id={"star" + getRandomInt(1, 5)}
       cy={getRandomInt(10, 600)}
-      cx={getRandomInt(10, 800)}
+      cx={getRandomInt(10, 1400)}
       fillOpacity="null"
       strokeOpacity="null"
       strokeWidth="0"
@@ -36,8 +36,7 @@ const starsGenerator = (quantity) => {
   return allStars;
 };
 
-const stars2 = [...starsGenerator(300)]
-console.log(stars2);
+const stars2 = [starsGenerator(300)]
 
 const StarsSvg = styled(svgConfig)`
   #stars_group {
