@@ -19,8 +19,8 @@ const App = () => {
       <StyledApp>
         <Navbar />
         <AnimatePresence exitBeforeEnter>
-          <Switch location={location} key={location.key}>
-            <Route path="/about" component={About} />
+          <Switch location={location} key={location.pathname}>
+            <Route path="/about" component={About} exact/>
             <Route path="/" component={Home} />
           </Switch>
         </AnimatePresence>

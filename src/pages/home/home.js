@@ -15,10 +15,12 @@ const StyledButton = styled.button`
 `;
 
 const StyledMain = styled.main`
+
   background-color: transparent;
   height: 100%;
   width: 100vw;
   padding: 40px;
+  padding-left: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -69,6 +71,8 @@ const StyledMain = styled.main`
       font-weight: bold;
     }
   }
+
+
 `;
 
 
@@ -76,8 +80,9 @@ const letterWithHoverGenerator = (letter) => {
   const letterSeparator = letter.split('')
 
 
-  const letterWithHover = letterSeparator.map(e => (
+  const letterWithHover = letterSeparator.map((e, i) => (
     <motion.span 
+    key={i+'letter'}
     whileHover={{color: 'rgb(30,57,180)'}}
   >{e}</motion.span>
   ))
@@ -85,14 +90,21 @@ const letterWithHoverGenerator = (letter) => {
 
   return letterWithHover;
 };
-console.log(letterWithHoverGenerator('rodrigo'));
-const allLettersWithHover = letterWithHoverGenerator('rodrigo')
+const allLettersWithHover = letterWithHoverGenerator('Front end Developer engineer')
 
+const motionStyle ={
+  height: '100%',
+  width: "100%",
+  overflow: "hidden"
+}
 
 
 const Home = () => {
   return (
+    <motion.div className="motion-div" style={motionStyle}
+    exit={{y: "-100vh"}}>
     <StyledMain>
+
       <span className="tags">&lt;body&gt; </span>
       <div className="text-wrapper">
         <span className="tags">&lt;h1&gt; </span>
@@ -113,6 +125,8 @@ const Home = () => {
       <NightSky />
 
     </StyledMain>
+    </motion.div>
+
 
   );
 };

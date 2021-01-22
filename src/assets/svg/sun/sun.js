@@ -38,13 +38,12 @@ const Sun = () => {
  </defs>
  <g id="background_group">
   <title>background</title>
-  <rect x="-1" y="-1" width="1302" height="702" id="canvas_background" fill="#ffa851"/>
+  <rect x="0" y="0" width="100vw" height="100vh" id="canvas_background" fill="#ffa851"/>
   <g id="canvasGrid" display="none">
    <rect id="svg_3" width="100%" height="100%" x="0" y="0" strokeWidth="0" fill="url(#gridpattern)"/>
   </g>
  </g>
  <g>
-  <title>Layer 1</title>
   <g id="svg_4">
    <ellipse fill="#ffc33e" stroke="#000" strokeWidth="0" cx="286" cy="179.5" id="svg_2" className="sun-orbit1" rx="280" ry="280" opacity="0.33" filter="url(#svg_2_blur)"/>
    <ellipse fill="#ffc33e" stroke="#000" strokeWidth="0" cx="285" cy="183.5" id="svg_1" className="sun" rx="234" ry="236.5" filter="url(#svg_1_blur)"/>

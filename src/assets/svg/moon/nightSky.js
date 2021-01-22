@@ -1,10 +1,11 @@
 import svgConfig from "../../../util/genericSvgConfig";
-import {motion} from 'framer-motion'
 
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import Moon from "./moon";
 import FallingStars from "./falling-stars";
-import Clouds from "./clouds";
+import BigCloud from "./big-cloud1";
+import BigCloud2 from "./big-cloud2";
 import Stars from "./stars";
 
 const BackgroundConfig = styled(svgConfig)`
@@ -14,33 +15,58 @@ const BackgroundConfig = styled(svgConfig)`
   height: 100%;
   position: absolute;
   z-index: -1;
-
-  .motion{
-    background-color: red;
-    width: 500px;
-    height: 500px;
-  }
 `;
 
-const NightSky = () => (
-    <BackgroundConfig>
-      <g id="background_group">
-        <rect
-          fill="#142333"
-          id="canvas_background"
-          height="702"
-          width="1362"
-          y="0"
-          x="0"
-        />
-      </g>
-        
-       <Moon />
+const moonVariant = {
+  initial: {
+    x: "100vw",
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 3,
+    },
+  },
+};
 
-      <FallingStars />
-      <Stars />
-      <Clouds /> 
-    </BackgroundConfig>
+const NightSky = () => (
+  <BackgroundConfig>
+    <g id="background_group">
+      <rect
+        fill="#142333"
+        id="canvas_background"
+        height="702"
+        width="1362"
+        y="0"
+        x="0"
+      />
+    </g>
+    <motion.g
+      id="moon_group"
+      initial="initial"
+      animate="animate"
+      variants={moonVariant}
+    >
+      <Moon />
+    </motion.g>
+    <FallingStars />
+    <Stars />
+    <motion.g
+      initial={{x: "-100vw"}}
+      animate={{x: 0}}
+      transition={{duration: 3, delay: 2}}
+    >
+    <BigCloud />
+    </motion.g>
+    <motion.g
+      initial={{x: "100vw"}}
+      animate={{x: 0}}
+      transition={{duration: 3, delay: 2}}
+    >
+    <BigCloud2 />
+    </motion.g>
+  </BackgroundConfig>
 );
 
 export default NightSky;

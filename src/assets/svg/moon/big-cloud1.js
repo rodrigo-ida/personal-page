@@ -12,7 +12,7 @@ const BigCloudSVg = styled(config)`
   width: 100%;
   height: 100%;
   #svg_31 {
-    animation: ${cloudAnimation1} 60s alternate infinite;
+    animation: ${cloudAnimation1} 30s alternate infinite;
   }
 `;
 

@@ -11,7 +11,7 @@ const BigCloudSvg2 = styled(config)`
   height: 100%;
 
   #cloud2_group {
-    animation: ${cloudAnimation2} 60s alternate infinite;
+    animation: ${cloudAnimation2} 30s alternate infinite;
   }
 `;
 

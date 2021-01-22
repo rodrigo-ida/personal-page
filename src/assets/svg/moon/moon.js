@@ -1,6 +1,5 @@
 import svgConfig from "../../../util/genericSvgConfig";
 import styled, { keyframes } from "styled-components";
-import { motion } from "framer-motion";
 
 const glowing = keyframes`
 
@@ -14,18 +13,7 @@ const MoonSvg = styled(svgConfig)`
   }
 `;
 
-const moonVariant = {
-  initial: {
-    x: "100vw"
-  },
-  animate: {
-    x: 0,
-    y: 0,
-    transition: {
-      duration: 2
-    }
-  }
-}
+
 
 const Moon = () => (
     <MoonSvg>
@@ -34,11 +22,7 @@ const Moon = () => (
           <feGaussianBlur stdDeviation="20" />
         </filter>
       </defs>
-      <motion.g id="moon_group" 
-        initial="initial"
-        animate="animate"
-        variants={moonVariant}
-        >
+        <g>
         <ellipse
           id="orbit-1"
           ry="330"
@@ -122,7 +106,7 @@ const Moon = () => (
           cx="1078"
           fill="#ededed"
         />
-      </motion.g>
+      </g>
     </MoonSvg>
 );
 
