@@ -11,6 +11,7 @@ const MoonSvg = styled(svgConfig)`
   .orbit {
     animation: ${glowing} 3s ease-in-out infinite alternate;
   }
+  overflow: visible;
 `;
 
 

@@ -15,11 +15,14 @@ const BackgroundConfig = styled(svgConfig)`
   height: 100%;
   position: absolute;
   z-index: -1;
+
+  /* background-color: transparent; */
 `;
 
 const moonVariant = {
   initial: {
     x: "100vw",
+    opacity: 1,
   },
   animate: {
     x: 0,
@@ -28,20 +31,21 @@ const moonVariant = {
       duration: 3,
     },
   },
+
+};
+const clouds1Variant = {
+  initial: { x: "-100vw", opacity: 1 },
+  animate: { x: 0, transition: { duration: 3, delay: 2 } },
+
+};
+const clouds2Variant = {
+  initial: { x: "100vw", opacity: 1 },
+  animate: { x: 0, transition: { duration: 3, delay: 2 } },
+
 };
 
 const NightSky = () => (
   <BackgroundConfig>
-    <g id="background_group">
-      <rect
-        fill="#142333"
-        id="canvas_background"
-        height="702"
-        width="1362"
-        y="0"
-        x="0"
-      />
-    </g>
     <motion.g
       id="moon_group"
       initial="initial"
@@ -53,18 +57,18 @@ const NightSky = () => (
     <FallingStars />
     <Stars />
     <motion.g
-      initial={{x: "-100vw"}}
-      animate={{x: 0}}
-      transition={{duration: 3, delay: 2}}
+      initial="initial"
+      animate="animate"
+      variants={clouds1Variant}
     >
-    <BigCloud />
+      <BigCloud />
     </motion.g>
     <motion.g
-      initial={{x: "100vw"}}
-      animate={{x: 0}}
-      transition={{duration: 3, delay: 2}}
+      initial="initial"
+      animate="animate"
+      variants={clouds2Variant}
     >
-    <BigCloud2 />
+      <BigCloud2 />
     </motion.g>
   </BackgroundConfig>
 );

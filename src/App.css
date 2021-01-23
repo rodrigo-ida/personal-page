@@ -45,6 +45,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+svg{
+	overflow: visible;
+}
 
 .App {
   margin: 0;
