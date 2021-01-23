@@ -5,6 +5,8 @@ import Navbar from "./components/sidebar/navbar";
 import Home from "./pages/home/home";
 import About from "./pages/about/about";
 import { AnimatePresence } from "framer-motion";
+import Background from './assets/svg/background/background'
+
 
 const StyledApp = styled.div`
   display: flex;
@@ -17,6 +19,7 @@ const App = () => {
   return (
     <div className="App">
       <StyledApp>
+        <Background />
         <Navbar />
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>

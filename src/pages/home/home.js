@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import NightSky from "../../assets/svg/moon/nightSky";
-import {motion} from 'framer-motion'
-
-
+import { motion } from "framer-motion";
 
 const StyledButton = styled.button`
   background-color: transparent;
@@ -15,7 +13,6 @@ const StyledButton = styled.button`
 `;
 
 const StyledMain = styled.main`
-
   background-color: transparent;
   height: 100%;
   width: 100vw;
@@ -71,63 +68,55 @@ const StyledMain = styled.main`
       font-weight: bold;
     }
   }
-
-
 `;
 
-
 const letterWithHoverGenerator = (letter) => {
-  const letterSeparator = letter.split('')
-
+  const letterSeparator = letter.split("");
 
   const letterWithHover = letterSeparator.map((e, i) => (
-    <motion.span 
-    key={i+'letter'}
-    whileHover={{color: 'rgb(30,57,180)'}}
-  >{e}</motion.span>
-  ))
-  
+    <motion.span key={i + "letter"} whileHover={{ color: "rgb(30,57,180)" }}>
+      {e}
+    </motion.span>
+  ));
 
   return letterWithHover;
 };
-const allLettersWithHover = letterWithHoverGenerator('Front end Developer engineer')
+const allLettersWithHover = letterWithHoverGenerator(
+  "Front end Developer engineer"
+);
 
-const motionStyle ={
-  height: '100%',
+const motionStyle = {
+  height: "100%",
   width: "100%",
-  overflow: "hidden"
-}
-
+};
 
 const Home = () => {
   return (
-    <motion.div className="motion-div" style={motionStyle}
-    exit={{y: "-100vh"}}>
-    <StyledMain>
-
-      <span className="tags">&lt;body&gt; </span>
-      <div className="text-wrapper">
-        <span className="tags">&lt;h1&gt; </span>
-        <h1>
-          <span className="first-line">
-            <span>
-              <span className="letter-r">R</span>odrigo
+    <motion.div
+      className="motion-div"
+      style={motionStyle}
+      exit={{ y: '-100vh', transition: { duration: 1 } }}
+    >
+      <StyledMain>
+        <span className="tags">&lt;body&gt; </span>
+        <div className="text-wrapper">
+          <span className="tags">&lt;h1&gt; </span>
+          <h1>
+            <span className="first-line">
+              <span>
+                <span className="letter-r">R</span>odrigo
+              </span>
+              <span className="last-name">Ida</span>
             </span>
-            <span className="last-name">Ida</span>
-          </span>
-          <span className="second-line"
-          >{allLettersWithHover}</span>
-        </h1>
-        <span className="tags">&lt;/h1&gt; </span>
-        <StyledButton>Contate-me</StyledButton>
-      </div>
-      <span className="tags">&lt;/body&gt; </span>
-      <NightSky />
-
-    </StyledMain>
+            <span className="second-line">{allLettersWithHover}</span>
+          </h1>
+          <span className="tags">&lt;/h1&gt; </span>
+          <StyledButton>Contate-me</StyledButton>
+        </div>
+        <span className="tags">&lt;/body&gt; </span>
+        <NightSky />
+      </StyledMain>
     </motion.div>
-
-
   );
 };
 
