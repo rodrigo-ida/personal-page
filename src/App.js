@@ -6,24 +6,28 @@ import Home from "./pages/home/home";
 import About from "./pages/about/about";
 import { AnimatePresence } from "framer-motion";
 import Background from './assets/svg/background/background'
+import Transition from './components/transitionComponent/transitionComponent'
 
 
 const StyledApp = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
+  perspective: 500px;
+
 `;
 
 const App = () => {
   const location = useLocation();
   return (
     <div className="App">
-      <StyledApp>
+      <StyledApp >
         <Background />
         <Navbar />
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
             <Route path="/about" component={About} exact/>
+            <Route path="/skills" component={Transition} />
             <Route path="/" component={Home} />
           </Switch>
         </AnimatePresence>

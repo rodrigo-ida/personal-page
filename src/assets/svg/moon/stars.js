@@ -1,17 +1,21 @@
 import { motion } from "framer-motion";
 
-
 const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
 const allStars = [];
 
+
+
+
 const starsGenerator = (quantity) => {
   const star = (i) => {
-
     const starsVariant = {
-      initial: {  opacity: 1 },
-      animate:{ opacity: [0,1], transition: { repeat: Infinity, duration: '2.' + getRandomInt(1,9)}},
+      initial: { opacity: 1 },
+      animate: {
+        opacity: [0, 1],
+        transition: { repeat: Infinity, duration: "2." + getRandomInt(1, 9) },
+      }
     };
     return (
       <motion.ellipse

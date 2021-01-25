@@ -74,6 +74,8 @@ const StyledAbout = styled.main`
       overflow: hidden;
       position: relative;
       border-radius: 50px;
+      perspective: 1000px;
+
 
       .me {
         background-position-x: center;
@@ -82,8 +84,10 @@ const StyledAbout = styled.main`
         position: absolute;
         background-color: rgb(206, 220, 223);
         background-size: contain;
-        /* background-repeat: no-repeat; */
         background-image: url(${me});
+        /* transform : rotate3d(.3, .4, .4, 20deg);
+        transform: translateZ(30deg) */
+
       }
 
       .img_transition_background {
@@ -130,11 +134,12 @@ const linesVariant = {
   animate2: { x: "0vw", transition: { duration: 1, delay: .5} },
 }
 
+
 const About = () => {
   return (
-    <motion.div style={motionStyle} exit={{ y: "-100vh" }}>
-      <StyledAbout>
-        <div className="content_wrapper">
+    <motion.div style={motionStyle} exit={{ y: "-100vh" } }>
+      <StyledAbout >
+        <div className="content_wrapper" >
           <div className="text">
             <motion.h1
               initial="initial"
@@ -166,7 +171,7 @@ const About = () => {
             <button className="show-me-more_button">Mais</button>
           </div>
 
-          <div className="img_wrapper">
+          <div className="img_wrapper" >
             <div className="me"></div>
             <motion.div
               className="img_transition_background"

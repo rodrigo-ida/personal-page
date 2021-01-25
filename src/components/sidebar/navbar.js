@@ -16,6 +16,7 @@ const StyledNavbar = styled.nav`
   height: 100vh;
   background-color: transparent;
   position: absolute;
+  z-index: 5;
 
   .first_list {
     .first {

@@ -15,8 +15,8 @@ const BackgroundConfig = styled(svgConfig)`
   height: 100%;
   position: absolute;
   z-index: -1;
+  /* perspective: 200px; */
 
-  /* background-color: transparent; */
 `;
 
 const moonVariant = {
@@ -45,7 +45,8 @@ const clouds2Variant = {
 };
 
 const NightSky = () => (
-  <BackgroundConfig>
+  <BackgroundConfig >
+
     <motion.g
       id="moon_group"
       initial="initial"
@@ -56,7 +57,7 @@ const NightSky = () => (
     </motion.g>
     <FallingStars />
     <Stars />
-    <motion.g
+    {/* <motion.g
       initial="initial"
       animate="animate"
       variants={clouds1Variant}
@@ -68,8 +69,9 @@ const NightSky = () => (
       animate="animate"
       variants={clouds2Variant}
     >
-      <BigCloud2 />
-    </motion.g>
+      <BigCloud2 /> 
+    </motion.g> */}
+
   </BackgroundConfig>
 );
 
