@@ -17,7 +17,7 @@ const Background = () => (
   <motion.svg style={style}>
     <motion.rect
       className="background"
-      fill="#142333"
+      fill="black"
       height="100vh"
       width="100vw"
       y="0"

@@ -13,17 +13,7 @@ const Home = () => {
     <Main>
       <motion.div
         className="motion-transition"
-        initial={{ z: "0px" }}
-        exit={{
-          width: "100vw",
-          height: "100vh",
-          opacity: 0,
-          transition: {
-            width: { duration: 0.1 },
-            height: { duration: 0.1 },
-            opacity: { delay: 3, duration: 1 },
-          },
-        }}
+        
       >
         <Transition />
       </motion.div>

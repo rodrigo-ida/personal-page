@@ -10,6 +10,7 @@ const StyledAbout = styled.main`
   position: relative;
   padding: 1px;
   z-index: -1;
+  perspective: 500px;
 
   .content_wrapper {
     display: flex;
@@ -20,14 +21,18 @@ const StyledAbout = styled.main`
       height: 500px;
       margin-left: 100px;
       z-index: 1;
+      transform: translateX(-100vw);
 
       h1 {
         font-size: 120px;
         color: white;
+        transform: translateX(-100vw);
+
       }
 
       .lines_wrapper {
         padding: 30px 0;
+
 
         .line1 {
           display: block;
@@ -36,6 +41,8 @@ const StyledAbout = styled.main`
           border-radius: 5px;
           background: #ff4d5a;
           margin-bottom: 10px;
+          transform: translateX(-100vw);
+
         }
         .line2 {
           display: block;
@@ -44,6 +51,8 @@ const StyledAbout = styled.main`
           border-radius: 5px;
           background: #ff4d5a;
           margin-left: 54px;
+          transform: translateX(-100vw);
+
         }
       }
 
@@ -55,6 +64,8 @@ const StyledAbout = styled.main`
         -moz-letter-spacing: 0.1em;
         -ms-letter-spacing: 0.1em;
         letter-spacing: 0.1em;
+        transform: translateX(-100vw);
+
       }
 
       .show-me-more_button {
@@ -64,6 +75,8 @@ const StyledAbout = styled.main`
         height: 35px;
         color: white;
         background-color: #ff4d5a;
+        transform: translateX(-100vw);
+
       }
     }
 
@@ -82,6 +95,7 @@ const StyledAbout = styled.main`
         width: 100%;
         height: 100%;
         position: absolute;
+        z-index: -1;
         background-color: rgb(206, 220, 223);
         background-size: contain;
         background-image: url(${me});
@@ -111,35 +125,31 @@ const motionStyle = {
 };
 
 const titleVariant = {
-  initial: { x: "-100vw" },
-  animate: { x: "0vw", transition: { duration: 1} },
+  animate: { x: "100vw", transition: { duration: 1, delay: 1} },
 };
 const subTitleVariant = {
-  initial: { x: "-100vw" },
-  animate: { x: "0vw", transition: { duration: 1, delay: .3} },
+  animate: { x: "100vw", transition: { duration: 1, delay: 1.3} },
 };
 
 const imgTrasitionBackgroundVariant = {
-  initial: { x: 0 },
-  animate: { x: 1000, transition: { duration: 2 } },
+  animate: { x: 1000, transition: { duration: 4, delay: 2 } },
 };
 const imgTrasitionVariant = {
-  initial: { width: 50 },
-  animate: { width: [50, 300, 100], transition: { delay: 0.3, duration: 1 } },
+  animate: { width: [50, 300, 100], transition: { delay: 2.3, duration: 1 } },
 };
 
 const linesVariant = {
-  initial: { x: "-100vw" },
-  animate1: { x: "0vw", transition: { duration: 1, delay: .3} },
-  animate2: { x: "0vw", transition: { duration: 1, delay: .5} },
+  animate1: { x: "100vw", transition: { duration: 1, delay: 1.3} },
+  animate2: { x: "100vw", transition: { duration: 1, delay: 1.5} },
 }
+
 
 
 const About = () => {
   return (
     <motion.div style={motionStyle} exit={{ y: "-100vh" } }>
       <StyledAbout >
-        <div className="content_wrapper" >
+        <motion.div className="content_wrapper" initial={{z: -200}} animate={{z: 0}}>
           <div className="text">
             <motion.h1
               initial="initial"
@@ -175,19 +185,17 @@ const About = () => {
             <div className="me"></div>
             <motion.div
               className="img_transition_background"
-              initial="initial"
               animate="animate"
               variants={imgTrasitionBackgroundVariant}
             >
               <motion.div
                 className="img_transition"
-                initial="initial"
                 animate="animate"
                 variants={imgTrasitionVariant}
               ></motion.div>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
       </StyledAbout>
     </motion.div>
   );
