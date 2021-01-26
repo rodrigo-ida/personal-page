@@ -5,7 +5,7 @@ import letterWithHoverGenerator from '../../util/letterHover'
 
 
 const allLettersWithHover = letterWithHoverGenerator(
-  "Front end Developer engineer"
+  "Desenvolvedor Front End"
 );
 
 const Home = () => {
