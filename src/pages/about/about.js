@@ -99,8 +99,7 @@ const StyledAbout = styled.main`
         background-color: rgb(206, 220, 223);
         background-size: contain;
         background-image: url(${me});
-        /* transform : rotate3d(.3, .4, .4, 20deg);
-        transform: translateZ(30deg) */
+
 
       }
 
