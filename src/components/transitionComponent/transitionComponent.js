@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import backgroundImg from "../../assets/img/light-speed-background/light-speed.jpg";
+import backgroundImg from "../../assets/img/light-speed-background/space4.jfif";
 
 
 const StyledTransition = styled.div`
