@@ -3,12 +3,11 @@ import Transition from "../../components/transitionComponent/transitionComponent
 import Main from "../../components/main/home/homeMain";
 import letterCreator from '../../util/letterCreator'
 import Sun from '../../assets/svg/background/sunset'
-import BigCloud1 from '../../assets/svg/moon/big-cloud1'
-import BigCloud2 from '../../assets/svg/moon/big-cloud2'
+
 
 
 const allLettersWithHover = letterCreator(
-  "Desenvolvedor Front End"
+  "Desenvolvedor   Front   End"
 );
 
 const Home = () => {
@@ -42,8 +41,7 @@ const Home = () => {
         </div>
         <span className="tags">&lt;/body&gt; </span>
         <Sun />
-        {/* <BigCloud1 />
-        <BigCloud2 /> */}
+
       </motion.div>
     </Main>
   );

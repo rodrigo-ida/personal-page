@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import Stars from "./stars";
 import FallingStars from "../moon/falling-stars";
-import Leaves from './leaves'
+// import Leaves from './leaves'
 import Tree from './tree'
+import Branch from './treeBranch'
 
 
 
@@ -38,7 +39,8 @@ const Background = () => (
     <Tree />
     <FallingStars />
     <Stars />
-    <Leaves />
+    {/* <Leaves /> */}
+    <Branch />
   </motion.svg>
 );
 

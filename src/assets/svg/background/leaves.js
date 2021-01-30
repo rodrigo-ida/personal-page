@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import leaf from "../background/leaf2.svg";
 
 const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
@@ -28,6 +27,7 @@ const starsGenerator = (quantity) => {
     return (
 //coral
         <motion.g 
+        key={'leaves'+i}
         initial="initial"
         animate="animate"
         variants={leafVariant}

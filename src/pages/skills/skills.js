@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 import Transition from "../../components/transitionComponent/transitionComponent";
-// import Main from "../../components/main/home/homeMain";
 import { Link } from "react-router-dom";
 import letterCreator from '../../util/letterCreator'
 

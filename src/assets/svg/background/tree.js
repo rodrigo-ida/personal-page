@@ -3,8 +3,7 @@ import svgConfig from "../../../util/genericSvgConfig";
 
 const Tree1 = styled(svgConfig)`
   .tree {
-    transform: scale(0.08) rotate(-180deg) translateX(-12800px)
-      translateY(-3789px);
+    transform: scale(0.05) rotate(-180deg) translateX(-22401px) translateY(-6150px)
   }
 `;
 

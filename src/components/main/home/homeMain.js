@@ -62,8 +62,8 @@ perspective: 500px;
         display: flex;
         flex-direction: column;
         .letter-r {
-          color: #fc0853;
-          text-shadow: -1px 1px #08fdd9;
+          color: yellow;
+          text-shadow: -1px 1px black;
         }
       }
 

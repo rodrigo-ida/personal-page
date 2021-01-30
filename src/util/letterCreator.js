@@ -13,8 +13,8 @@ import { motion } from "framer-motion";
 //   };
 
 const style = {
-  color: "transparent",
-  textShadow: "0px 0px 30px #fc0853",
+  color: 'red',
+  textShadow: "0px 0px 3px black",
   display: 'inline-block'
 };
 
@@ -32,7 +32,7 @@ const letterWithHoverGenerator = (letter) => {
       initial={{ z:  -1000}}
       animate={{
         z: [getRandomInt(0, 100), getRandomInt(200, 800), getRandomInt(0, 0) ],
-        color: 'rgb(110,150,200)',
+        color: 'rgb(200,190,20)',
         transition: { duration: 5, delay: i/5  }
       }}
     >
