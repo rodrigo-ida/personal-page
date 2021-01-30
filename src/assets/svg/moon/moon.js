@@ -12,18 +12,62 @@ const MoonSvg = styled(svgConfig)`
     animation: ${glowing} 3s ease-in-out infinite alternate;
   }
   overflow: visible;
+  .complete-moon-group{
+    transform: translate(-100px, -700px)
+  }
 `;
 
-
-
 const Moon = () => (
-    <MoonSvg>
-      <defs>
-        <filter id="moon-orbit_blur">
-          <feGaussianBlur stdDeviation="20" />
-        </filter>
-      </defs>
-        <g>
+  <MoonSvg>
+    <defs>
+      <filter id="moon-orbit_blur">
+        <feGaussianBlur stdDeviation="20" />
+      </filter>
+    </defs>
+    <g className="complete-moon-group">
+      <g className="moon-group">
+        <ellipse
+          id="moon"
+          ry="280"
+          rx="280"
+          cy="297.50001"
+          cx="1138.5"
+          fill="#fff"
+        />
+        <ellipse
+          id="moon-cratery"
+          ry="26.5"
+          rx="25.5"
+          cy="165.5"
+          cx="1167.5"
+          fill="#ededed"
+        />
+        <ellipse
+          id="moon-cratery1"
+          ry="20.5"
+          rx="20.5"
+          cy="249.5"
+          cx="1295.5"
+          fill="#ededed"
+        />
+        <ellipse
+          id="moon-cratery3"
+          ry="17"
+          rx="15"
+          cy="412"
+          cx="1226"
+          fill="#ededed"
+        />
+        <ellipse
+          id="moon-cratery4"
+          ry="49"
+          rx="50"
+          cy="256"
+          cx="1078"
+          fill="#ededed"
+        />
+      </g>
+      <g className="orbit-group">
         <ellipse
           id="orbit-1"
           ry="330"
@@ -67,49 +111,9 @@ const Moon = () => (
           opacity="0.74"
           // filter="url(#moon-orbit_blur)"
         />
-        <ellipse
-          id="moon"
-          ry="280"
-          rx="280"
-          cy="297.50001"
-          cx="1138.5"
-          fill="#fff"
-        />
-        <ellipse
-          id="moon-cratery"
-          ry="26.5"
-          rx="25.5"
-          cy="165.5"
-          cx="1167.5"
-          fill="#ededed"
-        />
-        <ellipse
-          id="moon-cratery1"
-          ry="20.5"
-          rx="20.5"
-          cy="249.5"
-          cx="1295.5"
-          fill="#ededed"
-        />
-        <ellipse
-          id="moon-cratery3"
-          ry="17"
-          rx="15"
-          cy="412"
-          cx="1226"
-          fill="#ededed"
-        />
-        <ellipse
-          id="moon-cratery4"
-          ry="49"
-          rx="50"
-          cy="256"
-          cx="1078"
-          fill="#ededed"
-        />
       </g>
-    </MoonSvg>
+    </g>
+  </MoonSvg>
 );
-
 
 export default Moon;

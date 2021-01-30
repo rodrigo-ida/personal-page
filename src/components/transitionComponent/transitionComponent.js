@@ -4,6 +4,9 @@ import backgroundImg from "../../assets/img/light-speed-background/space4.jfif";
 
 
 const StyledTransition = styled.div`
+
+
+
   .wall {
     background: url(${backgroundImg});
     background-size: cover;
@@ -11,11 +14,13 @@ const StyledTransition = styled.div`
   .scene {
     perspective: 5px;
     perspective-origin: 37% 47%;
-    position: relative;
+    position: absolute;
+    /* position: relative; */
     z-index: -1;
     width: 406px;
     transform: translateX(465px);
     height: 100vh; 
+    display: none;
   }
 
   .wrap1 {
@@ -92,7 +97,7 @@ const Transition = () => (
     <motion.div
       className="scene"
       initial={{opacity: 0}}
-      exit={{opacity: [1, 1, 0], transition: {duration: 5, times: [0.1, 0.99, 1] }}}
+      exit={{opacity: [1, 1, 0], display: 'block', transition: {duration: 5, times: [0.1, 0.99, 1] }}}
       
     >
       <motion.div

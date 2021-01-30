@@ -29,6 +29,7 @@ perspective: 500px;
       color: #515152;
       font-family: "La Belle Aurore", cursive;
       font-size: 20px;
+      display: none;
     }
 
     h1 {
@@ -46,12 +47,16 @@ perspective: 500px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      padding-left: 10px;
+      padding: 100px;
       font-size: 12rem;
       line-height: 1;
       letter-spacing: 0.1em;
       margin-bottom: 1.6rem;
       text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+
+      .second-line-wrapper{
+        overflow: hidden;
+      }
 
       .first-line {
         display: flex;
@@ -67,6 +72,8 @@ perspective: 500px;
         color: white;
         font-size: 20px;
         font-weight: bold;
+        overflow: 'hidden';
+
       }
 
       button {

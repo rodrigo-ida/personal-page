@@ -45,8 +45,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-svg{
+svg {
 	overflow: visible;
+	transform-origin: 0px;
+}
+svg g{
+	overflow: visible;
+	transform-origin: 0px !important;
 }
 
 .App {

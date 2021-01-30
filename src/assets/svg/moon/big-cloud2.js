@@ -9,6 +9,8 @@ to{transform: translateX(-300px)}
 const BigCloudSvg2 = styled(config)`
   width: 100%;
   height: 100%;
+  /* position: absolute; */
+
 
   #cloud2_group {
     animation: ${cloudAnimation2} 30s alternate infinite;

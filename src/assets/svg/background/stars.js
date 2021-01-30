@@ -8,13 +8,12 @@ const allStars = [];
 
 
 
-const starsGenerator = (quantity) => {
+const StarsGenerator = (quantity) => {
   const star = (i) => {
-    const starsVariant = {
-      initial: { opacity: 1 },
+    const StarsVariant = {
       animate: {
-        opacity: [0, 1],
-        transition: { repeat: Infinity, duration: "2." + getRandomInt(1, 9) },
+        opacity: [0, 1, 0],
+        transition: { repeat: Infinity, duration: getRandomInt(3, 5) },
       }
     };
     return (
@@ -31,7 +30,7 @@ const starsGenerator = (quantity) => {
         fill="#ffffff"
         initial="initial"
         animate="animate"
-        variants={starsVariant}
+        variants={StarsVariant}
       />
     );
   };
@@ -43,12 +42,12 @@ const starsGenerator = (quantity) => {
   return allStars;
 };
 
-const stars2 = starsGenerator(15);
+const Stars2 = StarsGenerator(55);
 
 
 const Stars = () => (
-  <motion.g className="stars_group">
-    {stars2}
+  <motion.g className="Stars_group">
+    {Stars2}
   </motion.g>
 );
 

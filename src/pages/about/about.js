@@ -21,12 +21,16 @@ const StyledAbout = styled.main`
       height: 500px;
       margin-left: 100px;
       z-index: 1;
-      transform: translateX(-100vw);
+      perspective: 500px;
 
-      h1 {
+
+      .title {
         font-size: 120px;
         color: white;
-        transform: translateX(-100vw);
+        text-shadow: 1px 1px 1px rgba(255,20,20,.3);
+        transform: translateZ(300px) rotateZ(20deg);
+
+
 
       }
 
@@ -41,7 +45,6 @@ const StyledAbout = styled.main`
           border-radius: 5px;
           background: #ff4d5a;
           margin-bottom: 10px;
-          transform: translateX(-100vw);
 
         }
         .line2 {
@@ -51,12 +54,11 @@ const StyledAbout = styled.main`
           border-radius: 5px;
           background: #ff4d5a;
           margin-left: 54px;
-          transform: translateX(-100vw);
 
         }
       }
 
-      p {
+      .subtitle {
         color: #fff;
         font-size: 40px;
         line-height: 1.5;
@@ -64,7 +66,8 @@ const StyledAbout = styled.main`
         -moz-letter-spacing: 0.1em;
         -ms-letter-spacing: 0.1em;
         letter-spacing: 0.1em;
-        transform: translateX(-100vw);
+        text-shadow: 1px 1px 20px #17314a;
+        
 
       }
 
@@ -75,7 +78,6 @@ const StyledAbout = styled.main`
         height: 35px;
         color: white;
         background-color: #ff4d5a;
-        transform: translateX(-100vw);
 
       }
     }
@@ -124,11 +126,24 @@ const motionStyle = {
 };
 
 const titleVariant = {
-  animate: { x: "100vw", transition: { duration: 1, delay: 1} },
+  initial: { x: "-100vw"},
+  animate: { x: "0vw", transition: { duration: 1, delay: 1} },
 };
 const subTitleVariant = {
-  animate: { x: "100vw", transition: { duration: 1, delay: 1.3} },
+  initial: { x: "-100vw"},
+  animate: { x: "0vw",  transition: { duration: 1, delay: 1.3} },
 };
+const buttonMoreVariant = {
+  initial: { x: "-100vw"},
+  animate: { x: "0vw", transition: { duration: 1, delay: 1.3} },
+};
+
+
+const linesVariant = {
+  initial: { x: "-100vw"},
+  animate1: { x: "0vw", transition: { duration: 1, delay: 1.3} },
+  animate2: { x: "0vw", transition: { duration: 1, delay: 1.5} },
+}
 
 const imgTrasitionBackgroundVariant = {
   animate: { x: 1000, transition: { duration: 4, delay: 2 } },
@@ -136,12 +151,6 @@ const imgTrasitionBackgroundVariant = {
 const imgTrasitionVariant = {
   animate: { width: [50, 300, 100], transition: { delay: 2.3, duration: 1 } },
 };
-
-const linesVariant = {
-  animate1: { x: "100vw", transition: { duration: 1, delay: 1.3} },
-  animate2: { x: "100vw", transition: { duration: 1, delay: 1.5} },
-}
-
 
 
 const About = () => {
@@ -151,6 +160,7 @@ const About = () => {
         <motion.div className="content_wrapper" initial={{z: -200}} animate={{z: 0}}>
           <div className="text">
             <motion.h1
+              className='title'
               initial="initial"
               animate="animate"
               variants={titleVariant}
@@ -170,14 +180,22 @@ const About = () => {
             <motion.p
               initial="initial"
               animate="animate"
+              className="subtitle"
               variants={subTitleVariant}
               >Eu amo Ciência, Tecnologia</motion.p>
             <motion.p
               initial="initial"
               animate="animate"
+              className="subtitle"
               variants={subTitleVariant}
-            >e Rock</motion.p>
-            <button className="show-me-more_button">Mais</button>
+              >e Rock</motion.p>
+            <motion.button 
+            
+            initial="initial"
+            animate="animate"
+            variants={buttonMoreVariant}
+            
+            className="show-me-more_button">Mais</motion.button>
           </div>
 
           <div className="img_wrapper" >

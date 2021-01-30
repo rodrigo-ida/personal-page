@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 const fallingStarAnimation = keyframes`
 
 from{stroke-dashoffset: 0px;}
-to{  stroke-dashoffset: -820px;}
+to{  stroke-dashoffset: -1220px;}
 
 
 `;
@@ -15,22 +15,22 @@ const FallingStarsSvg = styled(svgConfig)`
 
 #falling-stars_group {
     #falling-star {
-      animation: ${fallingStarAnimation} 1s 2s ease  ;
+      animation: ${fallingStarAnimation} 1s 1s linear  ;
       stroke-dasharray: 112px 1753px;
       stroke-dashoffset:130px;
     }
     #falling-star2 {
-      animation: ${fallingStarAnimation} 1s 4s ease  ;
+      animation: ${fallingStarAnimation} 1s 4s linear  ;
       stroke-dasharray: 112px 1753px;
       stroke-dashoffset:130px;
     }
     #falling-star3 {
-      animation: ${fallingStarAnimation} 1s 5s ease  ;
+      animation: ${fallingStarAnimation} 1s 5s linear  ;
       stroke-dasharray: 112px 1753px;
       stroke-dashoffset:130px;
     }
     #falling-star4 {
-      animation: ${fallingStarAnimation} 1s 7s ease  ;
+      animation: ${fallingStarAnimation} 1s 7s linear  ;
       stroke-dasharray: 112px 1753px;
       stroke-dashoffset:130px;
     }

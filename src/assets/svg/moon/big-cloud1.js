@@ -11,6 +11,8 @@ to{transform: translateX(300px)}
 const BigCloudSVg = styled(config)`
   width: 100%;
   height: 100%;
+  position: absolute;
+  
   #svg_31 {
     animation: ${cloudAnimation1} 30s alternate infinite;
   }
