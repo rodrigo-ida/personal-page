@@ -82,7 +82,7 @@ const manyBirdsGenerator = (quantity) =>{
 const Bird = () => (
   <BirdWrapper>
 
-      {manyBirdsGenerator(50)}
+      {manyBirdsGenerator(10)}
     
 
     {/* <motion.div

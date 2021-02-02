@@ -55,8 +55,8 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" activeStyle={{ color: "red" }}>
-            <i className="fas fa-user"></i>
+          <NavLink to="/projects" activeStyle={{ color: "red" }}>
+            <i className="fas fa-eye"></i>
           </NavLink>
         </li>
         <li>
@@ -65,10 +65,12 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/projects" activeStyle={{ color: "red" }}>
-            <i className="fas fa-eye"></i>
+          <NavLink to="/about" activeStyle={{ color: "red" }}>
+            <i className="fas fa-user"></i>
           </NavLink>
         </li>
+
+
         <li>
           <NavLink to="/contact" activeStyle={{ color: "red" }}>
             <i className="fas fa-envelope"></i>

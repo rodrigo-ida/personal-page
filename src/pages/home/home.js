@@ -3,6 +3,7 @@ import Transition from "../../components/transitionComponent/transitionComponent
 import Main from "../../components/main/home/homeMain";
 import letterCreator from '../../util/letterCreator'
 import Sun from '../../assets/svg/background/sunset'
+import Bird from '../../assets/svg/background/flyingBird'
 
 
 
@@ -13,16 +14,11 @@ const allLettersWithHover = letterCreator(
 const Home = () => {
   return (
     <Main>
-      <motion.div
-        className="motion-transition"
-        
-      >
-        <Transition />
-      </motion.div>
+
       <motion.div
         className="motion-div"
         initial={{ z: "0px" }}
-        exit={{ z: "500px", transition: { duration: 1 } }}
+        exit={{ z: "500px", transition: { duration: 5 } }}
       >
         <span className="tags">&lt;body&gt; </span>
         <div className="text-wrapper">
@@ -40,7 +36,8 @@ const Home = () => {
           <button>Contate-me</button>
         </div>
         <span className="tags">&lt;/body&gt; </span>
-        <Sun />
+        <Sun exit={{y: 100 , transition: { duration: 5}}} />
+        <Bird />
 
       </motion.div>
     </Main>

@@ -46,9 +46,9 @@ const Stars2 = StarsGenerator(55);
 
 
 const Stars = () => (
-  <motion.g className="Stars_group">
+  <motion.svg className="Stars_group">
     {Stars2}
-  </motion.g>
+  </motion.svg>
 );
 
 export default Stars;
