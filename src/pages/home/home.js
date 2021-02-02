@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Transition from "../../components/transitionComponent/transitionComponent";
 import Main from "../../components/main/home/homeMain";
 import letterCreator from '../../util/letterCreator'
 import Sun from '../../assets/svg/background/sunset'
