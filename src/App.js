@@ -8,7 +8,6 @@ import About from "./pages/about/about";
 import Projects from "./pages/projects/projects";
 import Skills from "./pages/skills/skills";
 import { AnimatePresence } from "framer-motion";
-import Background from './assets/svg/background/background'
 
 
 
@@ -16,7 +15,6 @@ const StyledApp = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  perspective: 500px;
 
 `;
 
@@ -30,7 +28,6 @@ const App = () => {
   return (
     <div className="App">
       <StyledApp >
-        <Background path={location.pathname} />
         <Navbar />
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>

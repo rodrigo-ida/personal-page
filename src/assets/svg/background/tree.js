@@ -2,8 +2,12 @@ import styled from "styled-components";
 import svgConfig from "../../../util/genericSvgConfig";
 
 const Tree1 = styled(svgConfig)`
+    position: absolute;
+    
+    transform: translate(-345px, 250px);
+
   .tree {
-    transform: scale(0.05) rotate(-180deg) translateX(-22401px) translateY(-6150px)
+    transform: scale(0.05) rotate(-180deg) translateX(-25744px) translateY(-6150px)
   }
 `;
 

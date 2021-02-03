@@ -1,5 +1,6 @@
 import svgConfig from "../../../util/genericSvgConfig";
 import styled, { keyframes } from "styled-components";
+import {motion} from 'framer-motion'
 
 const glowing = keyframes`
 
@@ -8,6 +9,9 @@ to{opacity: 50%}
 `;
 
 const MoonSvg = styled(svgConfig)`
+position: absolute;
+
+
   .orbit {
     animation: ${glowing} 3s ease-in-out infinite alternate;
   }
@@ -17,6 +21,11 @@ const MoonSvg = styled(svgConfig)`
   }
 `;
 
+const MoonVariants ={
+  initial:{ x: -1461, y: -728},
+  animate:{ x: -1150, y: -310 , transition: { duration: 2}}
+}
+
 const Moon = () => (
   <MoonSvg>
     <defs>
@@ -24,7 +33,13 @@ const Moon = () => (
         <feGaussianBlur stdDeviation="20" />
       </filter>
     </defs>
-    <g className="complete-moon-group">
+    <motion.g 
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={MoonVariants}
+    
+    className="complete-moon-group">
       <g className="moon-group">
         <ellipse
           id="moon"
@@ -112,7 +127,7 @@ const Moon = () => (
           // filter="url(#moon-orbit_blur)"
         />
       </g>
-    </g>
+    </motion.g>
   </MoonSvg>
 );
 

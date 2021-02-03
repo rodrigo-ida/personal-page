@@ -5,15 +5,6 @@ const StyledMain = styled.main`
 overflow: hidden;
 perspective: 500px;
 
-.motion-transition{
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  opacity: 1;
-
-}
-
 
   .motion-div {
     background-color: transparent;
