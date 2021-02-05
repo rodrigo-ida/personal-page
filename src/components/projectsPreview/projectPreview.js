@@ -4,9 +4,6 @@ import styled from "styled-components";
 
 import movieProjectImg from "../../assets/img/projects/movieReview-img.png";
 import furnitureProjectImg from "../../assets/img/projects/furniture.png";
-import movieProjectIpadImg from "../../assets/img/projects/movieReview-ipad-img.png";
-import movieProjectMobileImg from "../../assets/img/projects/movieReview-mobile-img.png";
-import Background from "../../assets/svg/background/background";
 
 const StyledProject = styled.div`
   transform: translate(0, 20px);
@@ -19,8 +16,7 @@ const StyledProject = styled.div`
     display: flex;
     flex-wrap: wrap;
 
-    .furniture-project,
-    .pc-project {
+    .project {
       width: 40%;
       height: 300px;
       position: relative;
@@ -29,25 +25,36 @@ const StyledProject = styled.div`
       margin-left: 60px;
       margin-bottom: 50px;
       display: flex;
-    align-items: flex-end;
+      align-items: flex-end;
+      border: 1px solid dimgray;
 
-      .subtitle-wrapper{
 
-        height: 0px;
-        color: transparent;
-        
-      }
-
-      :hover{
-
-      .subtitle-wrapper{
-        height: 50px;
+      .subtitle-wrapper {
+        height: 100%;
         width: 100%;
-        background-color: rgba(0,0,0,.3);
-        color: white;
-        transition: all .3s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: flex-end;
+
+        .subtitle {
+          height: 0px;
+          color: transparent;
+        }
       }
 
+      :hover {
+        .subtitle-wrapper {
+          background-color: rgba(0, 0, 0, 0);
+          transition: all 0.3s ease-in-out;
+
+          .subtitle {
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 50px;
+            width: 100%;
+            color: white;
+            transition: all 0.3s ease-in-out;
+          }
+        }
       }
     }
 
@@ -68,7 +75,7 @@ const ProjectItem = (props) => {
   const rotateY = useTransform(x, [0, 400], [-45, 45]);
 
   function handleMouse(event) {
-    x.set(200 + event.nativeEvent.offsetX / 10);
+    x.set(175 + event.nativeEvent.offsetX / 10);
     y.set(200 + event.nativeEvent.offsetY / 10);
   }
   function handleMouseOut() {
@@ -78,7 +85,6 @@ const ProjectItem = (props) => {
 
   return (
     <motion.div
-
       onMouseMove={handleMouse}
       onMouseOut={handleMouseOut}
       style={{ rotateX: rotateX, rotateY: rotateY }}
@@ -94,11 +100,18 @@ const ProjectItem = (props) => {
 const Project = () => {
   return (
     <StyledProject>
-      <motion.div className="project-container">
-        <ProjectItem subtitle="coisas escritas" classe="pc-project" />
-        <ProjectItem subtitle="coisas escritas" classe="furniture-project" />
-        <ProjectItem subtitle="coisas escritas" classe="pc-project" />
-        <ProjectItem subtitle="coisas escritas" classe="pc-project" />
+      <motion.div 
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1, transition: { duration: 1, delay: 1}}}
+      
+      className="project-container">
+        <ProjectItem subtitle="coisas escritas" classe="project pc-project" />
+        <ProjectItem
+          subtitle="coisas escritas"
+          classe="project furniture-project"
+        />
+        <ProjectItem subtitle="coisas escritas" classe="project pc-project" />
+        <ProjectItem subtitle="coisas escritas" classe="project pc-project" />
       </motion.div>
     </StyledProject>
   );

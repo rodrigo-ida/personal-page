@@ -35,7 +35,7 @@ const StyledNavbar = styled.nav`
         text-align: center;
         a{
 
-            color: orange;
+            color: black;
             font-size: 24px;
         }
     }
@@ -59,11 +59,7 @@ const Navbar = () => {
             <i className="fas fa-eye"></i>
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/skills" activeStyle={{ color: "red" }}>
-            <i className="fas fa-glasses"></i>
-          </NavLink>
-        </li>
+       
         <li>
           <NavLink to="/about" activeStyle={{ color: "red" }}>
             <i className="fas fa-user"></i>

@@ -6,7 +6,6 @@ import Navbar from "./components/sidebar/navbar";
 import Home from "./pages/home/home";
 import About from "./pages/about/about";
 import Projects from "./pages/projects/projects";
-import Skills from "./pages/skills/skills";
 import { AnimatePresence } from "framer-motion";
 
 
@@ -33,7 +32,6 @@ const App = () => {
           <Switch location={location} key={location.pathname}>
             <Route path="/about" component={About} exact/>
             <Route path="/projects" component={Projects} exact/>
-            <Route path="/skills" component={Skills} exact/>
             <Route path="/" component={Home} >
 
             </Route>

@@ -17,7 +17,7 @@ position: absolute;
   }
   overflow: visible;
   .complete-moon-group{
-    transform: translate(-100px, -700px)
+    transform: translate(-1400px, -700px)
   }
 `;
 

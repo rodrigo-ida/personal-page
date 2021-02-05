@@ -11,19 +11,19 @@ import ProjectPreview from "../../components/projectsPreview/projectPreview";
 const Projects = () => {
   const backgroundVariants = {
     initial: {
-      background: "linear-gradient(150deg, #0f2027, #203a43, #000e20)",
+      background:"linear-gradient(150deg, #0f2027 10%, #203a43 50%, #000e20 100%, #2C5364 100%, #f5af19, #f12711)",
+      
     },
     // exit: { background: ['linear-gradient(150deg, #2C5364 -53%, #f5af19, #f12711)','linear-gradient(150deg, #2C5364 20%, #f5af19, #f12711)','linear-gradient(150deg, #0f2027, #203a43, #2c5364)'], transition: {duration: 5, ease: 'linear'} }
   };
 
   const Main = styled.main`
-    overflow: hidden;
-    /* perspective: 500px; */
-    height: 110vw;
+    overflow-x: hidden;
+    height: auto;
 
     .motion-div {
       background-color: transparent;
-      height: 100%;
+      height: auto;
       width: 100vw;
       padding: 40px;
       padding-left: 80px;
@@ -31,11 +31,12 @@ const Projects = () => {
       flex-direction: column;
     }
 
-    .title{
-      color: white;
-    font-size: 350%;
-    text-align: center;
-    position: relative;
+    .title {
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 350%;
+      text-align: center;
+      position: relative;
+      font-family: "PT Sans", sans-serif;
     }
   `;
 
