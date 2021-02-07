@@ -121,21 +121,41 @@ const StyledAbout = styled.main`
 
         .textWrapper {
           width: 100%;
+
+          
           
 
           .skills-text {
-            color: white;
-            font-size: 30px;
+            /* color: white;
+            font-size: 20px;
             padding: 20px;
             text-align: justify;
             width: 60%;
-            font-family: "PT Sans", sans-serif;
+            font-family: "PT Sans", sans-serif; */
+
+            color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: justify;
+    width: 44%;
+    font-family: "PT Sans",sans-serif;
+    line-height: 40px;
             
 
             a {
               color: red;
               text-decoration: none;
             }
+          }
+
+          .second-p{
+            /* transform: translate(524px, 110px); */
+            margin: 110px 0 0 524px;
+
+            p{
+              width: 70%;
+            }
+
           }
         }
         .skills-list-wrapper {

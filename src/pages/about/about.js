@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Background from "../../assets/svg/background/background";
 import Main from '../../components/main/about/mainAbout'
+import BackgroundDrawSvg from '../../assets/svg/about/backgroundDraw'
 
 
 
@@ -112,6 +113,7 @@ const About = () => {
           <div className="skills-wrapper">
             <div className="skills-body">
               <div className="textWrapper">
+                <BackgroundDrawSvg />
                 <p className="skills-text">
                   Meu foco principal é o desenvolvimento front end. HTML, CSS,
                   Javascript e ReactJS são as minhas principais áreas de
@@ -119,17 +121,20 @@ const About = () => {
                   ferramentas que circundam o universo do desenvolvimento web.
                 </p>
 
-                <p className="skills-text">
-                  Sempre atento às boas práticas de Clean Code, desenvolvo
-                  aplicações com código reutilizável e organizado.
+                <div className="second-p">
+                  <p className="skills-text">
+                    Sempre atento às boas práticas de Clean Code, desenvolvo
+                    aplicações com código reutilizável e organizado.
                 </p>
-                <p className="skills-text">
-                  Fique à vontade para olhar os meus <Link to="/projects">Projetos</Link> ou entrar em <Link to="/contact">contato</Link>.
+
+                  <p className="skills-text">
+                    Fique à vontade para olhar os meus <Link to="/projects">Projetos</Link> ou entrar em <Link to="/contact">contato</Link>.
                 </p>
+                </div>
               </div>
 
               <div className="skills-list-wrapper">
-              <h1 className="skills-title">Conhecimentos</h1>
+                <h1 className="skills-title">Conhecimentos</h1>
 
                 <ul>
                   <li className="skills-list">css </li>
