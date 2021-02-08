@@ -9,7 +9,7 @@ const StyledNavbar = styled.nav`
   height: 100vh;
   background-color: transparent;
   position: absolute;
-  z-index: 5;
+  z-index: 555;
 
   .first_list {
     .first {

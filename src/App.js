@@ -1,12 +1,14 @@
 
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation} from "react-router-dom";
 import styled from "styled-components";
 import "./App.css";
 import Navbar from "./components/sidebar/navbar";
 import Home from "./pages/home/home";
 import About from "./pages/about/about";
+import Contact from "./pages/contact/contact";
 import Projects from "./pages/projects/projects";
 import { AnimatePresence } from "framer-motion";
+
 
 
 
@@ -25,6 +27,7 @@ const App = () => {
 
  
   return (
+    
     <div className="App">
       <StyledApp >
         <Navbar />
@@ -32,9 +35,9 @@ const App = () => {
           <Switch location={location} key={location.pathname}>
             <Route path="/about" component={About} exact/>
             <Route path="/projects" component={Projects} exact/>
-            <Route path="/" component={Home} >
+            <Route path="/contact" component={Contact} />
+            <Route path="/" component={Home} />
 
-            </Route>
           </Switch>
         </AnimatePresence>
       </StyledApp>

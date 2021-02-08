@@ -126,12 +126,7 @@ const StyledAbout = styled.main`
           
 
           .skills-text {
-            /* color: white;
-            font-size: 20px;
-            padding: 20px;
-            text-align: justify;
-            width: 60%;
-            font-family: "PT Sans", sans-serif; */
+
 
             color: white;
     font-size: 20px;
@@ -149,7 +144,6 @@ const StyledAbout = styled.main`
           }
 
           .second-p{
-            /* transform: translate(524px, 110px); */
             margin: 110px 0 0 524px;
 
             p{

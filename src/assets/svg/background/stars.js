@@ -18,6 +18,7 @@ const StarsGenerator = (quantity) => {
     };
     return (
       <motion.ellipse
+      style={{position: 'absolute'}}
         key={i + "star"}
         ry={getRandomInt(1, 2)}
         rx={"1." + getRandomInt(1, 9)}
@@ -46,7 +47,7 @@ const Stars2 = StarsGenerator(55);
 
 
 const Stars = () => (
-  <motion.svg className="Stars_group">
+  <motion.svg className="Stars_group" style={{position: 'absolute'}}>
     {Stars2}
   </motion.svg>
 );

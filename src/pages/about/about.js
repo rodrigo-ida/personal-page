@@ -1,15 +1,21 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Background from "../../assets/svg/background/background";
-import Main from '../../components/main/about/mainAbout'
-import BackgroundDrawSvg from '../../assets/svg/about/backgroundDraw'
+import Main from "../../components/main/about/mainAbout";
+import BackgroundDrawSvg from "../../assets/svg/about/backgroundDraw";
+import BackgroundDrawResponsivitySvg from "../../assets/svg/about/backgroundDrawResponsivity";
 
-
-
+import Tree from "../../assets/svg/background/tree";
+import Branch from "../../assets/svg/background/treeBranch";
+import Stars from "../../assets/svg/background/stars";
+import Moon from "../../assets/svg/background/moon";
 
 const motionStyle = {
-  height: "100vh",
+  height: "fit-content",
   width: "100vw",
+  position: "relative",
+  zIndex: 5,
   overflowX: "hidden",
 };
 
@@ -21,7 +27,6 @@ const subTitleVariant = {
   initial: { x: "-100vw" },
   animate: { x: "0vw", transition: { duration: 1, delay: 1.3 } },
 };
-
 
 const linesVariant = {
   initial: { x: "-100vw" },
@@ -48,6 +53,13 @@ const About = () => {
     <motion.div style={motionStyle} exit={{ y: "-100vh" }}>
       <Main>
         <Background backgroundVariants={backgroundVariants} />
+        {/* <Tree /> */}
+        <Branch />
+        <Stars />
+        <motion.div initial={{x: 1400}}>
+
+        <Moon />
+        </motion.div>
         <motion.div
           className="content_wrapper"
           initial={{ z: -200 }}
@@ -92,7 +104,6 @@ const About = () => {
             >
               e Rock
             </motion.p>
-
           </div>
 
           <div className="img_wrapper">
@@ -117,19 +128,28 @@ const About = () => {
                 <p className="skills-text">
                   Meu foco principal é o desenvolvimento front end. HTML, CSS,
                   Javascript e ReactJS são as minhas principais áreas de
-                  conhecimento. Não obstante, estou sempre aprendendo novas
+                  conhecimento, das quais passei os últimos dois anos
+                  aperfeiçoando. Não obstante, estou sempre aprendendo novas
                   ferramentas que circundam o universo do desenvolvimento web.
                 </p>
 
                 <div className="second-p">
+                  <BackgroundDrawResponsivitySvg />
                   <p className="skills-text">
-                    Sempre atento às boas práticas de Clean Code, desenvolvo
-                    aplicações com código reutilizável e organizado.
-                </p>
+                    Atualmente, estudo Análise e Desenvolvimento de Sistemas no
+                    Centro Universitário das Faculdades Metropolitanas Unidas
+                    (FMU) e busco uma vaga como desenvolvedor web Jr.
+                  </p>
 
                   <p className="skills-text">
-                    Fique à vontade para olhar os meus <Link to="/projects">Projetos</Link> ou entrar em <Link to="/contact">contato</Link>.
-                </p>
+                    Sempre atento às boas práticas de Clean Code, desenvolvo
+                    aplicações com código reutilizável e organizado. Fique à
+                    vontade para olhar os meus{" "}
+                    <a href="https://github.com/rodrigo-ida?tab=repositories">
+                      Projetos no Github
+                    </a>{" "}
+                    ou entrar em <Link to="/contact">contato</Link>.
+                  </p>
                 </div>
               </div>
 
@@ -148,6 +168,7 @@ const About = () => {
                   <li className="skills-list">ReactJS </li>
                   <li className="skills-list">npm </li>
                   <li className="skills-list">Git </li>
+                  <li className="skills-list">responsividade</li>
                 </ul>
               </div>
             </div>
