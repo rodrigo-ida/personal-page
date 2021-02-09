@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import {NavLink} from 'react-router-dom'
 
-const styledNavbarList = styled.ul`
+const StyledNavbarList = styled.ul`
     list-style: none;
     padding: 40px 0;
     height: 70%;
@@ -16,14 +17,16 @@ const styledNavbarList = styled.ul`
         font-size: 24px;
       }
     }
+
+    
   
 `;
 
 const navbarList = (props) => {
   return (
-    <styledNavbarList>
-      {props.children}
-    </styledNavbarList>
+    <StyledNavbarList>
+        {props.children}
+    </StyledNavbarList>
   );
 };
 

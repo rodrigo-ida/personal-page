@@ -52,8 +52,26 @@ const StyledNavbar = styled.nav`
       }
     }
 
+    .navbar-itens_list {
+      list-style: none;
+      padding: 40px 0;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
 
+      li {
+        padding: 10px 0 20px 0;
+        text-align: center;
+        a {
+          color: black;
+          font-size: 24px;
+        }
+      }
+    }
   }
+
+
 `;
 
 export default StyledNavbar;
