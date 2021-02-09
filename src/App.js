@@ -1,5 +1,5 @@
 
-import { Route, Switch, useLocation} from "react-router-dom";
+import { Redirect, Route, Switch, useLocation} from "react-router-dom";
 import styled from "styled-components";
 import "./App.css";
 import Navbar from "./components/sidebar/navbar";
@@ -37,6 +37,7 @@ const App = () => {
             <Route path="/projects" component={Projects} exact/>
             <Route path="/contact" component={Contact} />
             <Route path="/" component={Home} />
+            <Redirect from="*" to="/" />
 
           </Switch>
         </AnimatePresence>

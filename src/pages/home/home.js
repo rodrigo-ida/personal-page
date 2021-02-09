@@ -21,9 +21,6 @@ const Home = () => {
         "linear-gradient(150deg, #0f2027 0%, #203a43 30%, #000e20 70%, #2C5364 100%, #f5af19, #f12711)",
         "linear-gradient(150deg, #0f2027 10%, #203a43 50%, #000e20 100%, #2C5364 100%, #f5af19, #f12711)",
 
-        // "linear-gradient(150deg, #2C5364 20%, #f5af19, #f12711)",
-        // "linear-gradient(150deg, #2C5364 90%, #f5af19, #f12711)",
-        // "linear-gradient(150deg, #0f2027, #203a43, #000e20)",
       ],
       transition: { duration: 5, ease: "linear" },
     },

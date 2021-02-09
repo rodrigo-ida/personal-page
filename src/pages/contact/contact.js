@@ -93,7 +93,7 @@ const Projects = () => {
                     <div className="contact-wrapper">
                         <form className="contact-form">
                             <input type="text" className="contact-input name-input" placeholder="Nome" />
-                            <input type="email" className="contact-input email-input" placeholder="email" />
+                            <input type="mail" className="contact-input email-input" placeholder="email" />
                             <input type="text" className="contact-input subject-input" placeholder="assunto" />
                             <textarea cols="50" rows="20" className="message-area" placeholder="mensagem" />
                             <input type="submit" className="submit"  value="Enviar" />

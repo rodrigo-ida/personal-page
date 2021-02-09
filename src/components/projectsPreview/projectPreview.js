@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import movieProjectImg from "../../assets/img/projects/movieReview-img.png";
 import furnitureProjectImg from "../../assets/img/projects/furniture.png";
+import WineStoreProjectImg from "../../assets/img/projects/wineStore-preview.png";
 
 const StyledProject = styled.div`
   transform: translate(0, 20px);
@@ -16,53 +17,61 @@ const StyledProject = styled.div`
     display: flex;
     flex-wrap: wrap;
 
-    .project {
+    a {
       width: 40%;
-      height: 300px;
-      position: relative;
-      background-repeat: no-repeat;
-      background-size: cover;
+      text-decoration: none;
       margin-left: 60px;
       margin-bottom: 50px;
-      display: flex;
-      align-items: flex-end;
-      border: 1px solid dimgray;
 
-
-      .subtitle-wrapper {
-        height: 100%;
+      .project {
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
+        height: 300px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
         display: flex;
         align-items: flex-end;
+        border: 1px solid dimgray;
 
-        .subtitle {
-          height: 0px;
-          color: transparent;
-        }
-      }
-
-      :hover {
         .subtitle-wrapper {
-          background-color: rgba(0, 0, 0, 0);
-          transition: all 0.3s ease-in-out;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          display: flex;
+          align-items: flex-end;
 
           .subtitle {
-            background-color: rgba(0, 0, 0, 0.3);
-            height: 50px;
-            width: 100%;
-            color: white;
+            height: 0px;
+            color: transparent;
+          }
+        }
+
+        :hover {
+          .subtitle-wrapper {
+            background-color: rgba(0, 0, 0, 0);
             transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            .subtitle {
+              background-color: rgba(0, 0, 0, 0.3);
+              height: 50px;
+              width: 100%;
+              color: white;
+              transition: all 0.3s ease-in-out;
+            }
           }
         }
       }
     }
 
-    .pc-project {
+    .movie-project {
       background-image: url(${movieProjectImg});
     }
     .furniture-project {
       background-image: url(${furnitureProjectImg});
+    }
+    .wine-project {
+      background-image: url(${WineStoreProjectImg});
     }
   }
 `;
@@ -100,18 +109,30 @@ const ProjectItem = (props) => {
 const Project = () => {
   return (
     <StyledProject>
-      <motion.div 
-        initial={{ opacity: 0}}
-        animate={{ opacity: 1, transition: { duration: 1, delay: 1}}}
-      
-      className="project-container">
-        <ProjectItem subtitle="coisas escritas" classe="project pc-project" />
-        <ProjectItem
-          subtitle="coisas escritas"
-          classe="project furniture-project"
-        />
-        <ProjectItem subtitle="coisas escritas" classe="project pc-project" />
-        <ProjectItem subtitle="coisas escritas" classe="project pc-project" />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
+        className="project-container"
+      >
+        <a href="https://moviesreview-qu36aps38.vercel.app/work">
+          <ProjectItem
+            subtitle="Movie Review Project"
+            classe="project movie-project"
+          />{" "}
+        </a>
+
+        <a href="https://furniture-store-ho6nrpp7n.vercel.app/">
+          <ProjectItem
+            subtitle="House furniture and tech ecommerce project"
+            classe="project furniture-project"
+          />
+        </a>
+        <a href="https://wine-store-k7ybpqnzd.vercel.app/trendingDestaque">
+          <ProjectItem
+            subtitle="wine ecommerce store project"
+            classe="project wine-project"
+          />
+        </a>
       </motion.div>
     </StyledProject>
   );
