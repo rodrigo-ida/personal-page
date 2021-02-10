@@ -91,7 +91,7 @@ const Projects = () => {
                 <div className="contact-wrapper">
                     <h1 className="title">Contato</h1>
                     <div className="contact-wrapper">
-                        <form className="contact-form" action="contactForm.php" method="POST">
+                        <form className="contact-form" action="http://php.rodrigoida.com.br/contactForm.php" method="POST">
                             <input type="text"  name="name" className="contact-input name-input" placeholder="Nome" />
                             <input type="mail"  name="email" className="contact-input email-input" placeholder="email" />
                             <input type="text"  name="subject" className="contact-input subject-input" placeholder="assunto" />

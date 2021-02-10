@@ -1,43 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import StyledNavbar from "./styledNavbar";
 import NavbarList from "./navbarList";
+import NavbarMobileModal from "./mobileNavbar/navbarMobileModal/navbarMobileModal";
 
-import BurgerButton from "./burgerButton/BurgerBtn";
+import BurgerButton from "./mobileNavbar/burgerButton/BurgerBtn";
 
 const Navbar = () => {
+  const [clicked, setclicked] = useState(false);
+
+  const linksArray = [
+    { url: "/", fontAwesomeClass: "fas fa-home" , description: "Início"},
+    { url: "/projects", fontAwesomeClass: "fas fa-eye" , description: 'Projetos'},
+    { url: "/about", fontAwesomeClass: "fas fa-user" , description: 'Sobre'},
+    { url: "/contact", fontAwesomeClass: "fas fa-envelope" , description: 'Contato'},
+  ];
+
+  const links = linksArray.map((e, i) => {
+    
+    return(
+    <li className="navbar-list-item" key={i + "navbarLinks"}>
+      <NavLink to={e.url} exact activeStyle={{ color: "floralwhite", fontSize: '35px' }}>
+        {clicked ? e.description : <i className={e.fontAwesomeClass}></i>}
+      </NavLink>
+    </li>
+  )});
+
+
   return (
-    <StyledNavbar>
-      <div className="first_list">
-        <p className="first">R</p>
+    <StyledNavbar clicked={clicked}>
+      <div className="logo-wrapper">
+        <p className="logo">R</p>
       </div>
       {window.outerWidth > 600 ? (
-        <NavbarList>
-          <li>
-            <NavLink to="/" exact activeStyle={{ color: "red" }}>
-              <i className="fas fa-home"></i>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/projects" activeStyle={{ color: "red" }}>
-              <i className="fas fa-eye"></i>
-            </NavLink>
-          </li>
+        <NavbarList>{links}</NavbarList>
+        ) : (
+          <div className="burger-button-wrapper">
+          <BurgerButton setclicked={setclicked} />
+          <NavbarMobileModal clicked={clicked} >
+          <NavbarList>{links}</NavbarList>
 
-          <li>
-            <NavLink to="/about" activeStyle={{ color: "red" }}>
-              <i className="fas fa-user"></i>
-            </NavLink>
-          </li>
 
-          <li>
-            <NavLink to="/contact" activeStyle={{ color: "red" }}>
-              <i className="fas fa-envelope"></i>
-            </NavLink>
-          </li>
-        </NavbarList>
-      ) : (
-        <BurgerButton />
+          </NavbarMobileModal>
+        </div>
       )}
     </StyledNavbar>
   );

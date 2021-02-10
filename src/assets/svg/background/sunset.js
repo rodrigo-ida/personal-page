@@ -9,16 +9,29 @@ to{opacity: 20%}
 `;
 
 const SunSvg = styled(svgConfig)`
+
+@media (min-width: 300px){
   position: absolute;
   z-index: -1;
   top: 673px;
   left: 1308px;
 
+  transform: translate(-1090px, -60px);
+  
   .orbit {
     animation: ${glowing} 3s ease-in-out infinite alternate;
   }
-  .complete-sun-group {
-    /* transform: translate(-1px, -70px) */
+
+}
+  @media (min-width: 900px){
+
+  
+  position: absolute;
+  z-index: -1;
+  top: 673px;
+  left: 1308px;
+
+
   }
 `;
 

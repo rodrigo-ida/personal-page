@@ -21,18 +21,21 @@ const StyledMain = styled.main`
 
     .text-wrapper {
       display: flex;
+      width: 100vw;
       flex-direction: column;
       flex-wrap: wrap;
-      padding: 100px;
       font-size: 12rem;
       line-height: 1;
-      letter-spacing: 0.1em;
+      letter-spacing: 7px;
       margin-bottom: 1.6rem;
       text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+      transform: translate(-380px, 167px);
+
 
       .name {
-        font-size: 60px;
+        font-size: 40px;
         margin: 10px 0 0 320px;
+        width: 100vw;
 
         display: flex;
         flex-direction: column;
@@ -100,6 +103,8 @@ const StyledMain = styled.main`
       letter-spacing: 0.1em;
       margin-bottom: 1.6rem;
       text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+      transform: translate(0px, 0px);
+
 
       .name {
         font-size: 60px;

@@ -2,38 +2,32 @@ import styled from "styled-components";
 
 const StyledNavbar = styled.nav`
   @media (min-width: 300px) {
-    width: 60px;
-    height: 100vh;
+    width: 100vw;
+    height: ${props => props.clicked ? '100vh' : '10vh'};
+    padding: 15px;
     background-color: transparent;
     position: absolute;
     z-index: 555;
+    overflow: hidden;
+
+    
 
     .logo-wrapper {
-      .first {
-        font-size: 49px;
-        padding: 10px 0 20px 0;
-        text-align: center;
+      position: absolute;
+
+      .logo {
+        font-size: 30px;
         color: black;
+        
       }
     }
 
-    .navbar-itens_list {
-      list-style: none;
-      padding: 40px 0;
-      height: 70%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      li {
-        padding: 10px 0 20px 0;
-        text-align: center;
-        a {
-          color: black;
-          font-size: 24px;
-        }
-      }
+    .burger-button-wrapper{
+      margin-left: auto;
+    width: 50px;
     }
+
+ 
   }
 
   @media (min-width: 900px) {
@@ -42,9 +36,12 @@ const StyledNavbar = styled.nav`
     background-color: transparent;
     position: absolute;
     z-index: 555;
+    display: block;
+    padding: 0;
 
     .logo-wrapper {
-      .first {
+      padding: 0px;
+      .logo {
         font-size: 49px;
         padding: 10px 0 20px 0;
         text-align: center;
@@ -52,23 +49,7 @@ const StyledNavbar = styled.nav`
       }
     }
 
-    .navbar-itens_list {
-      list-style: none;
-      padding: 40px 0;
-      height: 70%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      li {
-        padding: 10px 0 20px 0;
-        text-align: center;
-        a {
-          color: black;
-          font-size: 24px;
-        }
-      }
-    }
+    
   }
 
 
