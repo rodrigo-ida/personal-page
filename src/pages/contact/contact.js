@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import styled from "styled-components";
 import FallingStars from "../../assets/svg/background/fallingStars";
 import Background from "../../assets/svg/background/background";
 import Tree from "../../assets/svg/background/tree";
