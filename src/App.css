@@ -51,11 +51,11 @@ table {
 }
 svg {
 	overflow: visible;
-	transform-origin: 0px;
+	/* transform-origin: 0px; */
 }
 svg g{
 	overflow: visible;
-	transform-origin: 0px !important;
+	/* transform-origin: 0px !important; */
 }
 
 .App {

@@ -7,11 +7,11 @@ const StyledMain = styled.main`
   
   
   overflow: hidden;
-  perspective: 500px;
+  /* perspective: 500px; */
 
   .motion-div {
     background-color: transparent;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     padding: 40px;
     padding-left: 80px;

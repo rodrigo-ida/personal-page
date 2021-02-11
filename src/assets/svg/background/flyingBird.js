@@ -82,15 +82,8 @@ const manyBirdsGenerator = (quantity) =>{
 const Bird = () => (
   <BirdWrapper>
 
-      {manyBirdsGenerator(10)}
+      {manyBirdsGenerator(5)}
     
-
-    {/* <motion.div
-      className="birdWrapper"
-      initial={{ scaleX: -1 }}
-    >
-      <div className="bird"></div>
-    </motion.div> */}
   </BirdWrapper>
 );
 

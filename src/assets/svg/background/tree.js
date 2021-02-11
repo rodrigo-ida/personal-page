@@ -2,39 +2,46 @@ import styled from "styled-components";
 import svgConfig from "../../../util/genericSvgConfig";
 
 const Tree1 = styled(svgConfig)`
+  @media (min-width: 300px) {
+    transform: rotate(180deg);
+    height: auto;
 
-@media (min-width: 300px){
+    /* transform: translate(-210px, -100px); */
 
-  .tree{
+    .tree-group {
+      /* transform: rotateX(180deg); */
+    }
 
-    position: absolute;
-    
-    transform: translate(-345px, 250px);
+    /* .tree-group {
+      position: absolute;
+      transform: translate(-345px, 250px);
+      transform: scale(0.03) rotate(-180deg) translateX(-11041px)
+        translateY(-18850px);
+    } */
 
+    @media (min-width: 900px) {
+      position: absolute;
 
-    transform: scale(0.03) rotate(-180deg) translateX(-11041px) translateY(-18850px);
-}
+      transform: translate(-345px, 250px);
 
- @media (min-width: 900px){
-
-    position: absolute;
-    
-    transform: translate(-345px, 250px);
-
-
-
-  .tree {
-    transform: scale(0.05) rotate(-180deg) translateX(-25744px) translateY(-6150px);
+      .tree-group {
+        transform: scale(0.05) rotate(-180deg) translateX(-25744px)
+          translateY(-6150px);
+      }
+    }
   }
-}
-
-}
-  
 `;
 
 const Tree = () => (
-  <Tree1>
-    <g className="tree" fill="#000000" stroke="none">
+  <Tree1
+    className="tree-svg"
+    version="1.0"
+    xmlns="http://www.w3.org/2000/svg"
+    width="100vw"
+    viewBox="0 0 12800 9600"
+    preserveAspectRatio="xMidYMid meet"
+  >
+    <g className="tree-group" fill="#000000" stroke="none">
       <path
         d="M5777 9194 c-12 -12 -8 -49 8 -71 18 -25 7 -36 -28 -27 -32 7 -83
    -19 -93 -48 -5 -17 0 -28 25 -48 39 -33 40 -50 3 -50 -35 0 -67 33 -117 118
