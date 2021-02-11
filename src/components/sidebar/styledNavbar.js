@@ -25,6 +25,10 @@ const StyledNavbar = styled.nav`
     .burger-button-wrapper{
       margin-left: auto;
     width: 50px;
+
+    .burgerbtn-lines{
+      background-color: ${props => props.pathname !== "/" ? 'white' : 'black'};
+    }
     }
 
  

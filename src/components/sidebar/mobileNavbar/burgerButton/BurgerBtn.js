@@ -22,12 +22,12 @@ const BurgerBtn = (props) => {
 
 
   return (
-    <StyledBurgerBtnContainer
+    <StyledBurgerBtnContainer className="styled-burgerbtn-container"
       onClick={() => props.setclicked((prevState) => !prevState)}
     >
-      <StyledBurgerBtn clicked={props.clicked} position="top" />
-      <StyledBurgerBtn clicked={props.clicked} position="middle" />
-      <StyledBurgerBtn clicked={props.clicked} position="bottom" />
+      <StyledBurgerBtn className="burgerbtn-lines" clicked={props.clicked} position="top" />
+      <StyledBurgerBtn className="burgerbtn-lines" clicked={props.clicked} position="middle" />
+      <StyledBurgerBtn className="burgerbtn-lines" clicked={props.clicked} position="bottom" />
     </StyledBurgerBtnContainer>
   );
 };

@@ -30,7 +30,7 @@ const App = () => {
     
     <div className="App">
       <StyledApp >
-        <Navbar />
+        <Navbar pathname={location.pathname}/>
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
             <Route path="/about" component={About} exact/>

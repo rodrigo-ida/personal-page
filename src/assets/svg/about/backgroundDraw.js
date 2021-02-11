@@ -2,8 +2,18 @@ import styled from 'styled-components'
 import svgConfig from '../../../util/genericSvgConfig'
 
 const BackgroundDrawSvg = styled(svgConfig)`
-transform: scale(0.4) translate(-90px, -289px);
+
+
+@media (min-width: 300px){
+transform: scale(0.2) translate(-610px,1661px);
 position: absolute;
+
+}
+@media (min-width: 900px){
+    transform: scale(0.4) translate(-90px, -289px);
+
+}
+
 
 `
 

@@ -6,7 +6,7 @@ import NavbarMobileModal from "./mobileNavbar/navbarMobileModal/navbarMobileModa
 
 import BurgerButton from "./mobileNavbar/burgerButton/BurgerBtn";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [clicked, setclicked] = useState(false);
 
   const linksArray = [
@@ -39,7 +39,7 @@ const Navbar = () => {
   });
 
   return (
-    <StyledNavbar clicked={clicked}>
+    <StyledNavbar clicked={clicked} pathname={props.pathname}>
       <div className="logo-wrapper">
         <p className="logo">R</p>
       </div>
