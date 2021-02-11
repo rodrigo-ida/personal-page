@@ -9,28 +9,24 @@ to{opacity: 20%}
 `;
 
 const SunSvg = styled(svgConfig)`
+  @media (min-width: 300px) {
+    position: absolute;
+    z-index: -1;
+    top: 673px;
+    left: 1308px;
 
-@media (min-width: 300px){
-  position: absolute;
-  z-index: -1;
-  top: 673px;
-  left: 1308px;
+    transform: translate(-1090px, -60px);
 
-  transform: translate(-1090px, -60px);
-  
-  .orbit {
-    animation: ${glowing} 3s ease-in-out infinite alternate;
+    .orbit {
+      animation: ${glowing} 3s ease-in-out infinite alternate;
+    }
   }
-
-}
-  @media (min-width: 900px){
-
-  
-  position: absolute;
-  z-index: -1;
-  top: 673px;
-  left: 1308px;
-
+  @media (min-width: 900px) {
+    position: absolute;
+    z-index: -1;
+    top: 673px;
+    left: 1308px;
+    transform: translate(0px, 0px);
 
   }
 `;
@@ -42,7 +38,10 @@ const Sun = () => (
         <feGaussianBlur stdDeviation="20" />
       </filter>
     </defs>
-    <motion.g className="complete-sun-group" exit={{ y: 400, transition: { duration: 5}}}>
+    <motion.g
+      className="complete-sun-group"
+      exit={{ y: 400, transition: { duration: 5 } }}
+    >
       <ellipse
         id="sun"
         ry="280"

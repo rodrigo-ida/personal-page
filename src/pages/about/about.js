@@ -56,9 +56,8 @@ const About = () => {
         {/* <Tree /> */}
         <Branch />
         <Stars />
-        <motion.div initial={{x: 1400}}>
-
-        <Moon />
+        <motion.div initial={{ x: 1400 }}>
+          <Moon />
         </motion.div>
         <motion.div
           className="content_wrapper"

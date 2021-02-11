@@ -1,6 +1,6 @@
 import svgConfig from "../../../util/genericSvgConfig";
 import styled, { keyframes } from "styled-components";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 const glowing = keyframes`
 
@@ -9,22 +9,32 @@ to{opacity: 50%}
 `;
 
 const MoonSvg = styled(svgConfig)`
-position: absolute;
 
-
+  @media (min-width: 300px){
+  position: absolute;
   .orbit {
     animation: ${glowing} 3s ease-in-out infinite alternate;
   }
   overflow: visible;
-  .complete-moon-group{
-    transform: translate(-1400px, -700px)
+  .complete-moon-group {
+    transform: translateX(-316px) translateY(-127px) translateZ(0px) scale(0.3);
+  }
+    
+  }
+  @media (min-width: 900px){
+
+  .complete-moon-group {
+    transform: translate(-1400px, -700px);
+  }
   }
 `;
 
-const MoonVariants ={
-  initial:{ x: -1461, y: -728},
-  animate:{ x: -1150, y: -310 , transition: { duration: 2}}
-}
+const MoonVariants = {
+  initial: { x: -1461, y: -728 },
+  animate: { x: -1150, y: -310, transition: { duration: 2 } },
+  mobileInitial: {x: -1461, y: -728, scale: 0.3 },
+  mobileAnimate: {x: -328, y: -112, transition: { duration: 2 }},
+};
 
 const Moon = () => (
   <MoonSvg>
@@ -33,13 +43,13 @@ const Moon = () => (
         <feGaussianBlur stdDeviation="20" />
       </filter>
     </defs>
-    <motion.g 
-      initial="initial"
-      animate="animate"
+    <motion.g
+      initial={`${window.outerWidth > 899 ? 'initial' : 'mobileInitial'}`}
+      animate={`${window.outerWidth > 899 ? 'animate' : 'mobileAnimate'}`}
       exit="exit"
       variants={MoonVariants}
-    
-    className="complete-moon-group">
+      className="complete-moon-group"
+    >
       <g className="moon-group">
         <ellipse
           id="moon"

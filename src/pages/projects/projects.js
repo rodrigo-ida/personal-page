@@ -18,17 +18,22 @@ const Projects = () => {
   };
 
   const Main = styled.main`
+
+  @media (min-width: 300px){
+
     overflow-x: hidden;
     height: auto;
 
-    .motion-div {
+    .projects-wrapper {
       background-color: transparent;
       height: auto;
       width: 100vw;
-      padding: 40px;
-      padding-left: 80px;
+      /* padding: 40px; */
+      /* padding-left: 80px; */
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 100px;
     }
 
     .title {
@@ -38,11 +43,41 @@ const Projects = () => {
       position: relative;
       font-family: "PT Sans", sans-serif;
     }
+  }
+
+  @media (min-width: 900px){
+
+    overflow-x: hidden;
+    height: auto;
+
+    .projects-wrapper {
+      background-color: transparent;
+      height: auto;
+      width: 100vw;
+      padding: 40px;
+      padding-left: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      padding-top: 0px;
+
+
+    }
+
+    .title {
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 350%;
+      text-align: center;
+      position: relative;
+      font-family: "PT Sans", sans-serif;
+    }
+  }
+    
   `;
 
   return (
     <Main>
-      <motion.div className="motion-div">
+      <motion.div className="projects-wrapper">
         <Background backgroundVariants={backgroundVariants}>
           <Moon />
           <Tree />
