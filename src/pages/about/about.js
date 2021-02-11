@@ -6,7 +6,6 @@ import Main from "../../components/main/about/mainAbout";
 import BackgroundDrawSvg from "../../assets/svg/about/backgroundDraw";
 import BackgroundDrawResponsivitySvg from "../../assets/svg/about/backgroundDrawResponsivity";
 
-import Tree from "../../assets/svg/background/tree";
 import Branch from "../../assets/svg/background/treeBranch";
 import Stars from "../../assets/svg/background/stars";
 import Moon from "../../assets/svg/background/moon";
@@ -53,7 +52,6 @@ const About = () => {
     <motion.div style={motionStyle} exit={{ y: "-100vh" }}>
       <Main>
         <Background backgroundVariants={backgroundVariants} />
-        {/* <Tree /> */}
         <Branch />
         <Stars />
         <motion.div initial={{ x: 1400 }}>
