@@ -5,13 +5,13 @@ const StyledMain = styled.main`
 @media (min-width: 300px){
 
   
-  
+  height: 100%;
   overflow: hidden;
   perspective: 500px;
 
   .motion-div {
     background-color: transparent;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     padding: 40px;
     padding-left: 80px;
