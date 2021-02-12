@@ -21,12 +21,15 @@ const SunSvg = styled(svgConfig)`
     /* z-index: -1; */
     /* top: 0px; */
     /* left: 0px; */
-    -webkit-transform: translate(-1090px,-60px);
+    /* -webkit-transform: translate(-1090px,-60px);
     -ms-transform: translate(-1090px,-60px);
     transform: translate(0px,0px);
     overflow: hidden;
     width: 100%;
-    height: 60%;
+    height: 60%; */
+
+    position: absolute;
+    transform: translate(128px,410px) scale(0.3);
 
     .orbit {
       animation: ${glowing} 3s ease-in-out infinite alternate;
@@ -43,7 +46,10 @@ const SunSvg = styled(svgConfig)`
 `;
 
 const Sun = () => (
-  <SunSvg className="sun-svg">
+  <SunSvg className="sun-svg" version="1.0"
+  xmlns="http://www.w3.org/2000/svg"
+
+  preserveAspectRatio="xMidYMid meet">
     <defs>
       <filter id="sun-orbit_blur">
         <feGaussianBlur stdDeviation="20" />

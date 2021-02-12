@@ -5,6 +5,7 @@ const Tree1 = styled(svgConfig)`
   @media (min-width: 300px) {
     transform: rotate(180deg);
     height: auto;
+    z-index: 3;
 
     /* transform: translate(-210px, -100px); */
 
@@ -21,6 +22,8 @@ const Tree1 = styled(svgConfig)`
 
     @media (min-width: 900px) {
       position: absolute;
+      z-index: 0;
+
 
       transform: translate(-345px, 250px);
 
