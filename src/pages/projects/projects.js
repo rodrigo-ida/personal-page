@@ -47,15 +47,15 @@ const Projects = () => {
 
   @media (min-width: 900px){
 
-    overflow-x: hidden;
+    overflow: hidden;
     height: auto;
 
     .projects-wrapper {
       background-color: transparent;
       height: auto;
       width: 100vw;
-      padding: 40px;
-      padding-left: 80px;
+      /* padding: 40px; */
+      /* padding-left: 80px; */
       display: flex;
       flex-direction: column;
       justify-content: stretch;
