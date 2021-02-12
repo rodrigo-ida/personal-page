@@ -37,7 +37,7 @@ const SunSvg = styled(svgConfig)`
   }
   @media (min-width: 900px) {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     top: 673px;
     left: 1308px;
     transform: translate(0px, 0px);

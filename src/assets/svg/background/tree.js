@@ -25,11 +25,10 @@ const Tree1 = styled(svgConfig)`
       z-index: 0;
 
 
-      transform: translate(-345px, 250px);
+      transform: translate(305px,260px);
 
       .tree-group {
-        transform: scale(0.05) rotate(-180deg) translateX(-25744px)
-          translateY(-6150px);
+        transform: scale(0.5) rotate(-180deg) translateX(-13274px) translateY(-7250px);
       }
     }
   }
