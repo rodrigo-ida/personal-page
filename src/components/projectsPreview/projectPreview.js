@@ -82,6 +82,8 @@ const StyledProject = styled.div`
     transform: translate(0, 20px);
     width: 100%;
     margin-top: 100px;
+    margin-left: 50px;
+
     perspective: 1000px;
 
     .project-container {

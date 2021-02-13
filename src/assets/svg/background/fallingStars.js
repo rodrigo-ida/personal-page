@@ -12,6 +12,8 @@ to{  stroke-dashoffset: -1220px;}
 
 const FallingStarsSvg = styled(svgConfig)`
 
+position: absolute;
+
 
 #falling-stars_group {
     #falling-star {

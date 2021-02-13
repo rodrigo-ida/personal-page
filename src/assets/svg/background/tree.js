@@ -9,9 +9,12 @@ const Tree1 = styled(svgConfig)`
     width: 100vw;
 
     /* transform: translate(-210px, -100px); */
+    transform: translate(50px 0px) rotate(180deg);
 
     .tree-group {
       /* transform: rotateX(180deg); */
+      transform: scale(0.01);
+
     }
 
     /* .tree-group {

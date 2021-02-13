@@ -26,14 +26,16 @@ const Projects = () => {
 
     .projects-wrapper {
       background-color: transparent;
-      height: auto;
-      width: 100vw;
+      padding: 1px;
+
+      /* height: auto; */
+      /* width: 100vw; */
       /* padding: 40px; */
       /* padding-left: 80px; */
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding-top: 100px;
+      /* display: flex; */
+      /* flex-wrap: wrap; */
+      /* justify-content: center; */
+      /* padding-top: 100px; */
     }
 
     .title {
@@ -42,6 +44,11 @@ const Projects = () => {
       text-align: center;
       position: relative;
       font-family: "PT Sans", sans-serif;
+
+    margin-top: 77px;
+    text-shadow: -1px -1px 1px black;
+    color: white;
+      
     }
   }
 
@@ -70,21 +77,29 @@ const Projects = () => {
       text-align: center;
       position: relative;
       font-family: "PT Sans", sans-serif;
+      margin-top: 0px;
+      text-shadow: 1px 1px darkseagreen;
+
     }
   }
     
   `;
 
+  
+
   return (
     <Main>
       <motion.div className="projects-wrapper">
+        <div style={{position: 'fixed'}}>
+
         <Background backgroundVariants={backgroundVariants}>
           <Moon />
-          <Tree />
-          <Branch />
-          <FallingStars />
-          <Stars />
+          <Branch className="Branch" />
+          <FallingStars className="FallingStars" />
+          <Stars className="Stars" />
+          <Tree className="Tree" />
         </Background>
+        </div>
         <h1 className="title"> Projetos</h1>
         <ProjectPreview />
       </motion.div>

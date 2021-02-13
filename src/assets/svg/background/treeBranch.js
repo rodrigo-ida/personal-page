@@ -6,6 +6,9 @@ const Tree1 = styled(svgConfig)`
     width: 100%;
     height: 50%;
     margin: -15% 0 0 -33%;
+
+    z-index: 5;  //projects page moon hiding
+
     
   }
   
