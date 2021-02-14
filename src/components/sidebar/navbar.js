@@ -48,7 +48,7 @@ const Navbar = (props) => {
         <NavbarList pathname={props.pathname} >{links}</NavbarList>
       ) : (
         <div className="burger-button-wrapper">
-          <BurgerButton setclicked={setclicked} />
+          <BurgerButton clicked={clicked} setclicked={setclicked} />
           <NavbarMobileModal clicked={clicked}>
             <NavbarList >{links}</NavbarList>
           </NavbarMobileModal>

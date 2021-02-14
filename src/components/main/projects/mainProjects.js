@@ -9,14 +9,7 @@ const Main = styled.main`
       background-color: transparent;
       padding-top: 0px;
 
-      /* height: auto; */
-      /* width: 100vw; */
-      /* padding: 40px; */
-      /* padding-left: 80px; */
-      /* display: flex; */
-      /* flex-wrap: wrap; */
-      /* justify-content: center; */
-      /* padding-top: 100px; */
+
     }
 
     .title {

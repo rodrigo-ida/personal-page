@@ -119,7 +119,7 @@ const About = () => {
             </motion.p>
           </div>
 
-          <div className="img_wrapper">
+          <motion.div animate={{ opacity: window.outerWidth > 600 ? 1 : [0, 1], transition: {delay: 1}}} className="img_wrapper">
             <div className="me"></div>
             <motion.div
               className="img_transition_background"
@@ -132,7 +132,7 @@ const About = () => {
                 variants={imgTrasitionVariant}
               ></motion.div>
             </motion.div>
-          </div>
+          </motion.div>
 
           <div className="skills-wrapper">
             <div className="skills-body">

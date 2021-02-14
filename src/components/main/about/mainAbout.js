@@ -142,7 +142,7 @@ const StyledAbout = styled.main`
             }
 
             .second-p {
-              margin: 180px 0 0 0px;
+              margin: 80px 0 0 0px;
 
 
               p {
@@ -153,6 +153,7 @@ const StyledAbout = styled.main`
           .skills-list-wrapper {
             width: 100%;
             margin: 0 auto;
+            padding-top: 30px;
             ul {
               display: -webkit-box;
               display: -webkit-flex;
