@@ -3,31 +3,30 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const StyledNextPageButton = styled.div`
+  @media (min-width: 300px) {
+    display: flex;
+    justify-content: center;
+    .link-to-projects {
+      position: absolute;
+      /* transform: translate(150px, -50px); */
+      z-index: 100;
 
-  @media (min-width: 300px){
-  .link-to-projects {
-    position: absolute;
-    transform: translate(150px, -50px);
-    z-index: 100;
-
-    a {
-      color: white;
-      text-decoration: none;
-      font-size: 40px;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 40px;
+      }
     }
   }
-
-  }
-  @media (min-width: 900px){
-    display: none
+  @media (min-width: 900px) {
+    display: none;
   }
 `;
 
 const NextStyledPageButton = (props) => {
   const variants = {
-    initial: { x: 150, y: -50 },
+    initial: { y: -50 },
     animate: {
-      x: 150,
       y: [-50, -70, -50],
       transition: { duration: 1.5, repeat: Infinity },
     },

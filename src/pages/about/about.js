@@ -137,7 +137,7 @@ const About = () => {
           <div className="skills-wrapper">
             <div className="skills-body">
               <div className="textWrapper">
-                <BackgroundDrawSvg className="first-svg-draw" />
+                <BackgroundDrawSvg  />
                 <p className="skills-text">
                   Meu foco principal é o desenvolvimento front end. HTML, CSS,
                   Javascript e ReactJS são as minhas principais áreas de

@@ -32,8 +32,8 @@ const StyledNavbarList = styled.ul`
       padding: 10px 0 20px 0;
       text-align: center;
       a {
-        color: orangered;
-        text-shadow: 1px 1px 1px black;
+        color: black;
+        text-shadow: 1px 1px 1px ${ props => props.pathname === "/" ? 'black' : 'white'};
         font-size: 24px;
       }
     }
@@ -41,7 +41,7 @@ const StyledNavbarList = styled.ul`
 `;
 
 const navbarList = (props) => {
-  return <StyledNavbarList>{props.children}</StyledNavbarList>;
+  return <StyledNavbarList pathname={props.pathname}>{props.children}</StyledNavbarList>;
 };
 
 export default navbarList;

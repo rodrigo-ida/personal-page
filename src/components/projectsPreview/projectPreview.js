@@ -8,10 +8,8 @@ import WineStoreProjectImg from "../../assets/img/projects/wineStore-preview.png
 
 const StyledProject = styled.div`
   @media (min-width: 300px) {
-    transform: translate(0, 20px);
     width: 100%;
     margin-top: 20px;
-    perspective: 1000px;
 
     .project-container {
       width: 100%;
@@ -22,7 +20,6 @@ const StyledProject = styled.div`
       a {
         width: 100%;
         text-decoration: none;
-        /* margin-left: 60px; */
         margin-bottom: 50px;
 
         .project {
@@ -38,7 +35,6 @@ const StyledProject = styled.div`
           .subtitle-wrapper {
             height: 100%;
             width: 100%;
-            /* background-color: rgba(0, 0, 0, 0.0); */
             display: flex;
             align-items: flex-end;
 
@@ -118,10 +114,9 @@ const StyledProject = styled.div`
             .subtitle {
               height: 0px;
               color: transparent;
-              background-color: rgba(0, 0, 0, 0.0);
+              background-color: rgba(0, 0, 0, 0);
               height: 0px;
               width: 100%;
-
             }
           }
 
@@ -141,16 +136,6 @@ const StyledProject = styled.div`
             }
           }
         }
-      }
-
-      .movie-project {
-        background-image: url(${movieProjectImg});
-      }
-      .furniture-project {
-        background-image: url(${furnitureProjectImg});
-      }
-      .wine-project {
-        background-image: url(${WineStoreProjectImg});
       }
     }
   }

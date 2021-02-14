@@ -18,6 +18,7 @@ const StyledNavbar = styled.nav`
       .logo {
         font-size: 30px;
         color: black;
+        text-decoration: none;
         
       }
     }
@@ -38,13 +39,13 @@ const StyledNavbar = styled.nav`
     width: 60px;
     height: 100vh;
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     z-index: 555;
     display: block;
     padding: 0;
 
     .logo-wrapper {
-      padding: 0px;
+      padding: 20px;
       .logo {
         font-size: 49px;
         padding: 10px 0 20px 0;

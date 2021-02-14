@@ -6,7 +6,7 @@ const StyledAbout = styled.main`
     width: 100vw;
     height: auto;
     position: relative;
-    padding-top: 1px;
+    padding-top: 0px;
     z-index: -1;
     overflow-x: hidden;
 

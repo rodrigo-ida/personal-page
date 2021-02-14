@@ -7,7 +7,7 @@ const Main = styled.main`
 
     .projects-wrapper {
       background-color: transparent;
-      padding-top: 1px;
+      padding-top: 0px;
 
       /* height: auto; */
       /* width: 100vw; */
@@ -26,7 +26,7 @@ const Main = styled.main`
       position: relative;
       font-family: "PT Sans", sans-serif;
 
-      margin-top: 77px;
+      padding-top: 77px;
       text-shadow: -1px -1px 1px black;
       color: white;
     }

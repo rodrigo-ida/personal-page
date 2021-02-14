@@ -57,7 +57,7 @@ const Sun = () => (
     </defs>
     <motion.g
       className="complete-sun-group"
-      exit={{ y: 1000, transition: { duration: 5 } }}
+      exit={{ y: 2000, transition: { duration: 5 } }}
     >
       <ellipse
         id="sun"

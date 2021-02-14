@@ -11,9 +11,10 @@ const allStars = [];
 const StarsGenerator = (quantity) => {
   const star = (i) => {
     const StarsVariant = {
+      initial: { opacity: 0},
       animate: {
         opacity: [0, 1, 0],
-        transition: { repeat: Infinity, duration: getRandomInt(3, 5) },
+        transition: { repeat: Infinity, duration: getRandomInt(3, 5), delay: 1 },
       }
     };
     return (
