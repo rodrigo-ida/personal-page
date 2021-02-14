@@ -10,9 +10,11 @@ import { AnimatePresence } from "framer-motion";
 
 const StyledApp = styled.div`
   width: 100%;
-  height: 100%;
+  height: ${window.innerHeight}px;
   position: relative;
 `;
+
+console.log(window.innerHeight);
 
 const App = () => {
   const location = useLocation();
