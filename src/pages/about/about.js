@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Background from "../../assets/svg/background/background";
@@ -6,9 +6,11 @@ import Main from "../../components/main/about/mainAbout";
 import BackgroundDrawSvg from "../../assets/svg/about/backgroundDraw";
 import BackgroundDrawResponsivitySvg from "../../assets/svg/about/backgroundDrawResponsivity";
 
-import Branch from "../../assets/svg/background/treeBranch";
+import NextPageButton from "../../components/nextPageButton/nextPageButton";
+
+// import Branch from "../../assets/svg/background/treeBranch";
 import Stars from "../../assets/svg/background/stars";
-import Moon from "../../assets/svg/background/moon";
+// import Moon from "../../assets/svg/background/moon";
 
 const motionStyle = {
   height: "fit-content",
@@ -48,15 +50,29 @@ const backgroundVariants = {
 };
 
 const About = () => {
+  const backgroundStyle = {
+    width: "100vw",
+    position: "absolute",
+    display: "flex",
+    flexDirection: "column",
+    height: "100%",
+    zIndex: -1,
+    justifyContent: "space-between",
+  };
+
+  useEffect(()=> {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
-    <motion.div style={motionStyle} exit={{ y: "-100vh" }}>
+    <motion.div style={motionStyle} >
       <Main>
-        <Background backgroundVariants={backgroundVariants} />
-        <Branch />
-        <Stars />
-        <motion.div initial={{ x: 1400 }}>
-          <Moon />
-        </motion.div>
+        <Background
+          backgroundStyle={backgroundStyle}
+          backgroundVariants={backgroundVariants}
+        >
+          <Stars />
+        </Background>
         <motion.div
           className="content_wrapper"
           initial={{ z: -200 }}
@@ -121,11 +137,11 @@ const About = () => {
           <div className="skills-wrapper">
             <div className="skills-body">
               <div className="textWrapper">
-                <BackgroundDrawSvg />
+                <BackgroundDrawSvg className="first-svg-draw" />
                 <p className="skills-text">
                   Meu foco principal é o desenvolvimento front end. HTML, CSS,
                   Javascript e ReactJS são as minhas principais áreas de
-                  conhecimento, das quais passei os últimos dois anos
+                  conhecimento, as quais passei os últimos dois anos
                   aperfeiçoando. Não obstante, estou sempre aprendendo novas
                   ferramentas que circundam o universo do desenvolvimento web.
                 </p>
@@ -171,6 +187,8 @@ const About = () => {
             </div>
           </div>
         </motion.div>
+
+        <NextPageButton url="/contact" />
       </Main>
     </motion.div>
   );

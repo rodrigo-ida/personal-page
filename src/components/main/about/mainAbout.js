@@ -6,7 +6,7 @@ const StyledAbout = styled.main`
     width: 100vw;
     height: auto;
     position: relative;
-    padding: 1px;
+    padding-top: 1px;
     z-index: -1;
     overflow-x: hidden;
 
@@ -178,12 +178,13 @@ const StyledAbout = styled.main`
         }
       }
     }
+
   }
   @media (min-width: 900px) {
     width: 100vw;
     height: auto;
     position: relative;
-    padding: 1px;
+    padding-top: 1px;
     z-index: -1;
     overflow-x: hidden;
 
@@ -307,6 +308,8 @@ const StyledAbout = styled.main`
               width: 44%;
               font-family: "PT Sans", sans-serif;
               line-height: 40px;
+              margin-left: 30px;
+
 
               a {
                 color: red;

@@ -3,8 +3,18 @@ import {motion} from 'framer-motion'
 import svgConfig from '../../../util/genericSvgConfig'
 
 const BackgroundDrawSvg = styled(svgConfig)`
+
+@media (min-width: 300px){
+    display: none;
+}
+
+
+@media (min-width: 900px){
+    display: block;
+
 transform: scale(0.4) translate(-2030px,-349px);
 position: absolute;
+}
 
 `
 

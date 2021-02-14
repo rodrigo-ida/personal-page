@@ -4,8 +4,8 @@ import Background from "../../assets/svg/background/background";
 import Tree from "../../assets/svg/background/tree";
 import Branch from "../../assets/svg/background/treeBranch";
 import Stars from "../../assets/svg/background/stars";
-import Moon from "../../assets/svg/background/moon";
-import Main from "./styledContact";
+// import Moon from "../../assets/svg/background/moon";
+import Main from '../../components/main/contact/mainContact';
 
 const Projects = () => {
   const backgroundVariants = {
@@ -16,22 +16,38 @@ const Projects = () => {
     // exit: { background: ['linear-gradient(150deg, #2C5364 -53%, #f5af19, #f12711)','linear-gradient(150deg, #2C5364 20%, #f5af19, #f12711)','linear-gradient(150deg, #0f2027, #203a43, #2c5364)'], transition: {duration: 5, ease: 'linear'} }
   };
 
+  const backgroundStyle = {
+    // top: 0,
+    // left: 0,
+    width: "100vw",
+    height: "100vh",
+    // position: "fixed",
+    position: 'absolute',
+    display: "flex",
+    flexDirection: "column",
+    zIndex: -1,
+    justifyContent: 'space-between',
+  };
+
   return (
     <Main>
       <motion.div className="motion-div">
-        <Background backgroundVariants={backgroundVariants}>
-          <Moon />
-          <Tree />
+        <Background backgroundStyle={backgroundStyle} backgroundVariants={backgroundVariants}>
+          {/* <Moon /> */}
           <Branch />
           <FallingStars />
           <Stars />
+          <div className="tree-wrapper">
+
+          <Tree />
+          </div>
         </Background>
         <div className="contact-wrapper">
           <h1 className="title">Contato</h1>
           <div className="form-wrapper">
             <form
               className="contact-form"
-              action="http://php.rodrigoida.com.br/contactForm.php"
+              action="https://php.rodrigoida.com.br/contactForm.php"
               method="POST"
             >
               <input

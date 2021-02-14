@@ -6,13 +6,15 @@ import Sun from "../../assets/svg/background/sunset";
 import Tree from "../../assets/svg/background/tree";
 import Branch from "../../assets/svg/background/treeBranch";
 import Bird from "../../assets/svg/background/flyingBird";
+import NextPageButton from "../../components/nextPageButton/nextPageButton";
 
 const allLettersWithHover = letterCreator("Desenvolvedor Front End");
 
 const Home = () => {
   const backgroundVariants = {
     initial: {
-      background: "linear-gradient(150deg, #0f2027 -100%, #203a43 -100%, #000e20 -100%, #2C5364 -53%, #f5af19, #f12711)",
+      background:
+        "linear-gradient(150deg, #0f2027 -100%, #203a43 -100%, #000e20 -100%, #2C5364 -53%, #f5af19, #f12711)",
     },
     exit: {
       background: [
@@ -20,15 +22,26 @@ const Home = () => {
         "linear-gradient(150deg, #0f2027 -10%, #203a43 -10%, #000e20 10%, #2C5364 20%, #f5af19, #f12711)",
         "linear-gradient(150deg, #0f2027 0%, #203a43 30%, #000e20 70%, #2C5364 100%, #f5af19, #f12711)",
         "linear-gradient(150deg, #0f2027 10%, #203a43 50%, #000e20 100%, #2C5364 100%, #f5af19, #f12711)",
-
       ],
       transition: { duration: 5, ease: "linear" },
     },
   };
 
+  const backgroundStyle = {
+    width: "100vw",
+    height: "100vh",
+    position: "absolute",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  };
+
   return (
     <Main className="main">
-      <Background backgroundVariants={backgroundVariants}>
+      <Background
+        backgroundStyle={backgroundStyle}
+        backgroundVariants={backgroundVariants}
+      >
         <Branch />
         <Tree />
         <Sun />
@@ -51,6 +64,8 @@ const Home = () => {
           </h1>
         </div>
       </motion.div>
+
+      <NextPageButton url="/projects" />
     </Main>
   );
 };

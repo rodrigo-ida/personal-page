@@ -17,7 +17,7 @@ const MoonSvg = styled(svgConfig)`
     overflow: visible;
     .complete-moon-group {
       /* transform: translateX(-316px) translateY(-127px) translateZ(0px) scale(0.3); */
-      transform: translateX(-304px) translateY(-66px) scale(0.3) translateZ(0px);
+      transform: translateX(-2461px) translateY(-66px) scale(0.3) translateZ(0px);
       transform-origin: 0 0;
       /* transform-origin: 1048.5px 312.5px; */
     }

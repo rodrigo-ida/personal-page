@@ -5,12 +5,16 @@ const BackgroundDrawSvg = styled(svgConfig)`
 
 
 @media (min-width: 300px){
-transform: scale(0.2) translate(-610px,1661px);
+/* transform: scale(0.2) translate(-610px,1661px); */
+transform: translate(-510px, 360px) scale(0.27);
+
 position: absolute;
 
 }
 @media (min-width: 900px){
-    transform: scale(0.4) translate(-90px, -289px);
+    /* transform: scale(0.4) translate(-90px, -289px); */
+    transform: scale(0.4) translate(-580px,-289px);
+
 
 }
 

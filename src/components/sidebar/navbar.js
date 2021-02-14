@@ -28,6 +28,7 @@ const Navbar = (props) => {
     return (
       <li className="navbar-list-item" key={i + "navbarLinks"}>
         <NavLink
+          onClick={()=> setclicked(false)}
           to={e.url}
           exact
           activeStyle={{ color: "floralwhite", fontSize: "35px" }}

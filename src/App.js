@@ -1,5 +1,4 @@
-
-import { Redirect, Route, Switch, useLocation} from "react-router-dom";
+import { Redirect, Route, Switch, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import "./App.css";
 import Navbar from "./components/sidebar/navbar";
@@ -9,37 +8,26 @@ import Contact from "./pages/contact/contact";
 import Projects from "./pages/projects/projects";
 import { AnimatePresence } from "framer-motion";
 
-
-
-
 const StyledApp = styled.div`
-  /* display: flex; */
   width: 100%;
   height: 100%;
   position: relative;
-
 `;
-
 
 const App = () => {
   const location = useLocation();
 
-
-
- 
   return (
-    
     <div className="App">
       <StyledApp className="application-wrapper">
-        <Navbar pathname={location.pathname}/>
+        <Navbar pathname={location.pathname} />
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
-            <Route path="/about" component={About} exact/>
-            <Route path="/projects" component={Projects} exact/>
+            <Route path="/about" component={About} exact />
+            <Route path="/projects" component={Projects} exact />
             <Route path="/contact" component={Contact} />
             <Route path="/" component={Home} />
             <Redirect from="*" to="/" />
-
           </Switch>
         </AnimatePresence>
       </StyledApp>
