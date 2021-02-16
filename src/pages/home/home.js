@@ -30,7 +30,7 @@ const Home = () => {
   const backgroundStyle = {
     width: "100vw",
     height: "100%",
-    position: "absolute",
+    position: "fixed",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",

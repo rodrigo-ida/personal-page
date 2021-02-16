@@ -52,7 +52,7 @@ const backgroundVariants = {
 const About = () => {
   const backgroundStyle = {
     width: "100vw",
-    position: "absolute",
+    position: "fixed",
     display: "flex",
     flexDirection: "column",
     height: "100%",

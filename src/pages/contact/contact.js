@@ -17,12 +17,9 @@ const Projects = () => {
   };
 
   const backgroundStyle = {
-    // top: 0,
-    // left: 0,
     width: "100vw",
     height: "100vh",
-    // position: "fixed",
-    position: 'absolute',
+    position: 'fixed',
     display: "flex",
     flexDirection: "column",
     zIndex: -1,
@@ -33,7 +30,6 @@ const Projects = () => {
     <Main>
       <motion.div className="motion-div">
         <Background backgroundStyle={backgroundStyle} backgroundVariants={backgroundVariants}>
-          {/* <Moon /> */}
           <Branch />
           <FallingStars />
           <Stars />

@@ -22,7 +22,7 @@ const Projects = () => {
   const backgroundStyle = {
     width: "100vw",
     height: "100vh",
-    position: "absolute",
+    position: "fixed",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",

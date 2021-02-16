@@ -14,7 +14,6 @@ const StyledApp = styled.div`
   position: relative;
 `;
 
-console.log(window.innerHeight);
 
 const App = () => {
   const location = useLocation();
