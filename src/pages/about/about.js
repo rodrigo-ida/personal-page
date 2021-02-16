@@ -173,7 +173,7 @@ const About = () => {
                   <li className="skills-list">css </li>
                   <li className="skills-list">sass </li>
                   <li className="skills-list">bootstrap </li>
-                  <li className="skills-list">Styled Cmponents</li>
+                  <li className="skills-list">Styled Components</li>
                   <li className="skills-list">Javascript </li>
                   <li className="skills-list">Node </li>
                   <li className="skills-list">Express </li>

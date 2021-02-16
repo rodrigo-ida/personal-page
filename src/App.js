@@ -1,4 +1,5 @@
 import { Redirect, Route, Switch, useLocation } from "react-router-dom";
+import {useState} from 'react'
 import styled from "styled-components";
 import "./App.css";
 import Navbar from "./components/sidebar/navbar";
@@ -8,19 +9,29 @@ import Contact from "./pages/contact/contact";
 import Projects from "./pages/projects/projects";
 import { AnimatePresence } from "framer-motion";
 
+
+
+console.log(window.innerHeight);
+
 const StyledApp = styled.div`
   width: 100%;
-  height: ${window.innerHeight}px;
+  height: ${props=> props.coisa}px;
   position: relative;
 `;
 
-
 const App = () => {
+
+  const [windowSize, setWindowSize] = useState(window.innerHeight)
+  
+  window.addEventListener('resize', (e)=> {
+    console.log(window.innerHeight)
+    setWindowSize(window.innerHeight)
+  })
   const location = useLocation();
 
   return (
-    <div className="App">
-      <StyledApp className="application-wrapper">
+    <div className="App" >
+      <StyledApp className="application-wrapper" coisa={windowSize} >
         <Navbar pathname={location.pathname} />
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>

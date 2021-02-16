@@ -32,7 +32,6 @@ const StyledBurgerBtn = styled.div`
   height: 2px;
   position: relative;
   animation: ${(props) => {
-    console.log(props);
     
       if (props.clicked) {
         if (props.position === "top") {
