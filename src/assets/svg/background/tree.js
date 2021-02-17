@@ -3,26 +3,17 @@ import svgConfig from "../../../util/genericSvgConfig";
 
 const Tree1 = styled(svgConfig)`
   @media (min-width: 300px) {
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
     height: auto;
     z-index: 3;
     width: 100vw;
 
-    /* transform: translate(-210px, -100px); */
-    transform: translate(50px 0px) rotate(180deg);
+    transform: translate(50px, 5px) rotate(180deg);
 
     .tree-group {
-      /* transform: rotateX(180deg); */
       transform: scale(0.01);
 
     }
-
-    /* .tree-group {
-      position: absolute;
-      transform: translate(-345px, 250px);
-      transform: scale(0.03) rotate(-180deg) translateX(-11041px)
-        translateY(-18850px);
-    } */
 
     @media (min-width: 900px) {
       position: absolute;
@@ -44,7 +35,6 @@ const Tree = () => (
     className="tree-svg"
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
-    // viewBox="0 0 12800 9600"
     viewBox="0 0 100 100"
     preserveAspectRatio="xMidYMid meet"
   >
