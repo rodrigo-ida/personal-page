@@ -21,7 +21,7 @@ const Projects = () => {
 
   const backgroundStyle = {
     width: "100vw",
-    height: "100vh",
+    height: "100%",
     position: "absolute",
     display: "flex",
     flexDirection: "column",
@@ -31,7 +31,7 @@ const Projects = () => {
   return (
     <Main>
       <motion.div className="projects-wrapper">
-        <div style={{ position: "fixed" }}>
+        <div style={{ height: '100%', position: "fixed" }}>
           <Background
             backgroundStyle={backgroundStyle}
             backgroundVariants={backgroundVariants}
