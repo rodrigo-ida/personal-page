@@ -2,9 +2,9 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 
 import styled from "styled-components";
 
-import movieProjectImg from "../../assets/img/projects/movieReview-img.png";
-import furnitureProjectImg from "../../assets/img/projects/furniture.png";
-import WineStoreProjectImg from "../../assets/img/projects/wineStore-preview.png";
+import movieProjectImg from "../../assets/img/projects/movieReview-img-min.png";
+import furnitureProjectImg from "../../assets/img/projects/furniture-min.png";
+import WineStoreProjectImg from "../../assets/img/projects/wineStore-preview-min.png";
 
 const StyledProject = styled.div`
   @media (min-width: 300px) {
