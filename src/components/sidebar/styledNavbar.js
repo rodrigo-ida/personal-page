@@ -17,7 +17,7 @@ const StyledNavbar = styled.nav`
 
       .logo {
         font-size: 30px;
-        color: black;
+        color: ${props => props.pathname === "/about" ? 'white' : 'black'};
         text-decoration: none;
         
       }

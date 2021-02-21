@@ -2,9 +2,8 @@ import { motion } from "framer-motion";
 
 
 const style = {
-  color: "transparent",
-  textShadow: "0px 0px 3px black",
   display: "inline-block",
+  opacity: 0
 };
 
 
@@ -20,7 +19,7 @@ const letterAppearanceGenerator = (letter) => {
         style={style}
         key={i + "letter"}
         animate={{
-          color: "rgb(200,190,20)",
+          opacity: 1,
           transition: { duration: 5, delay: i / 5 },
         }}
       >

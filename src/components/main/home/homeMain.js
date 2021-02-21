@@ -51,10 +51,12 @@ const StyledMain = styled.main`
 
           .second-line {
             letter-spacing: 0.1em;
-            color: white;
+            color: black;
             font-size: 20px;
             font-weight: bold;
             overflow: "hidden";
+            text-shadow: none;
+
           }
         }
       }
@@ -114,7 +116,7 @@ const StyledMain = styled.main`
 
           .second-line {
             letter-spacing: 0.1em;
-            color: white;
+            color: rgb(200,190,20);
             font-size: 20px;
             font-weight: bold;
             overflow: "hidden";

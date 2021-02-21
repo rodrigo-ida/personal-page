@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Main from "../../components/main/home/homeMain";
 import letterCreator from "../../util/letterCreator";
-import Background from "../../assets/svg/background/background";
+import Background from "../../components/background/background";
 import Sun from "../../assets/svg/background/sunset";
 import Tree from "../../assets/svg/background/tree";
 import Branch from "../../assets/svg/background/treeBranch";

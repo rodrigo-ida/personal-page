@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 import FallingStars from "../../assets/svg/background/fallingStars";
-import Background from "../../assets/svg/background/background";
+import Background from "../../components/background/background";
 import Tree from "../../assets/svg/background/tree";
 import Branch from "../../assets/svg/background/treeBranch";
 import Stars from "../../assets/svg/background/stars";
-// import Moon from "../../assets/svg/background/moon";
 import Main from '../../components/main/contact/mainContact';
 
 const Projects = () => {
@@ -13,7 +12,6 @@ const Projects = () => {
       background:
         "linear-gradient(150deg, #0f2027 10%, #203a43 50%, #000e20 100%, #2C5364 100%, #f5af19, #f12711)",
     },
-    // exit: { background: ['linear-gradient(150deg, #2C5364 -53%, #f5af19, #f12711)','linear-gradient(150deg, #2C5364 20%, #f5af19, #f12711)','linear-gradient(150deg, #0f2027, #203a43, #2c5364)'], transition: {duration: 5, ease: 'linear'} }
   };
 
   const backgroundStyle = {
