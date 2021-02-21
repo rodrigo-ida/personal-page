@@ -1,145 +1,8 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
-import styled from "styled-components";
+import StyledProject from './styledProjectPreview'
 
-import movieProjectImg from "../../assets/img/projects/movieReview-img-min.png";
-import furnitureProjectImg from "../../assets/img/projects/furniture-min.png";
-import WineStoreProjectImg from "../../assets/img/projects/wineStore-preview-min.png";
 
-const StyledProject = styled.div`
-  @media (min-width: 300px) {
-    width: 100%;
-    margin-top: 20px;
-
-    .project-container {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 25px;
-
-      a {
-        width: 100%;
-        text-decoration: none;
-        margin-bottom: 50px;
-
-        .project {
-          width: 100%;
-          height: 200px;
-          position: relative;
-          background-repeat: no-repeat;
-          background-size: cover;
-          display: flex;
-          align-items: flex-end;
-          border: 1px solid dimgray;
-
-          .subtitle-wrapper {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: flex-end;
-
-            .subtitle {
-              height: 0px;
-              color: transparent;
-              background-color: rgba(0, 0, 0, 0.3);
-              height: 50px;
-              width: 100%;
-              color: white;
-            }
-          }
-
-          :hover {
-            .subtitle-wrapper {
-              background-color: rgba(0, 0, 0, 0);
-              transition: all 0.3s ease-in-out;
-              cursor: pointer;
-
-              .subtitle {
-                transition: all 0.3s ease-in-out;
-              }
-            }
-          }
-        }
-      }
-
-      .movie-project {
-        background-image: url(${movieProjectImg});
-      }
-      .furniture-project {
-        background-image: url(${furnitureProjectImg});
-      }
-      .wine-project {
-        background-image: url(${WineStoreProjectImg});
-      }
-    }
-  }
-
-  @media (min-width: 900px) {
-    transform: translate(0, 20px);
-    width: 100%;
-    margin-top: 100px;
-    margin-left: 50px;
-
-    perspective: 1000px;
-
-    .project-container {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0px;
-
-      a {
-        width: 40%;
-        text-decoration: none;
-        margin-left: 60px;
-        margin-bottom: 50px;
-
-        .project {
-          width: 100%;
-          height: 300px;
-          position: relative;
-          background-repeat: no-repeat;
-          background-size: cover;
-          display: flex;
-          align-items: flex-end;
-          border: 1px solid dimgray;
-
-          .subtitle-wrapper {
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            display: flex;
-            align-items: flex-end;
-
-            .subtitle {
-              height: 0px;
-              color: transparent;
-              background-color: rgba(0, 0, 0, 0);
-              height: 0px;
-              width: 100%;
-            }
-          }
-
-          :hover {
-            .subtitle-wrapper {
-              background-color: rgba(0, 0, 0, 0);
-              transition: all 0.3s ease-in-out;
-              cursor: pointer;
-
-              .subtitle {
-                background-color: rgba(0, 0, 0, 0.3);
-                height: 50px;
-                width: 100%;
-                color: white;
-                transition: all 0.3s ease-in-out;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
 const ProjectItem = (props) => {
   const x = useMotionValue(200);
@@ -181,20 +44,20 @@ const Project = () => {
       >
         <a href="https://moviesreview-qu36aps38.vercel.app/work">
           <ProjectItem
-            subtitle="Movie Review Project"
+            subtitle="Site desenvolvido em React com design moderno e temática de streaming"
             classe="project movie-project"
           />
         </a>
 
         <a href="https://furniture-store-ho6nrpp7n.vercel.app/">
           <ProjectItem
-            subtitle="House furniture and tech ecommerce project"
+            subtitle="Projeto de ecommerce com design clean"
             classe="project furniture-project"
           />
         </a>
         <a href="https://wine-store-k7ybpqnzd.vercel.app/trendingDestaque">
           <ProjectItem
-            subtitle="wine ecommerce store project"
+            subtitle="Landing page com temática em comercialização de vinhos"
             classe="project wine-project"
           />
         </a>

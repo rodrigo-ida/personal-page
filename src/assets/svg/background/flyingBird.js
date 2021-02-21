@@ -44,6 +44,7 @@ const singleBirdGenerator = (initialX, finalX, yTransitions, delay, key) => {
         y: yTransitions,
         transition: { duration: 10, ease: "linear", delay: delay },
       }}
+      exit={{x: finalX, transition:{duration: 4}}}
     >
       <div className="bird"></div>
     </motion.div>
