@@ -31,17 +31,38 @@ const StyledNavbarList = styled.ul`
     .navbar-list-item {
       padding: 10px 0 20px 0;
       text-align: center;
+
       a {
         color: black;
-        text-shadow: 1px 1px 1px ${ props => props.pathname === "/" ? 'black' : 'white'};
+        text-shadow: 1px 1px 1px
+          ${(props) => (props.pathname === "/" ? "black" : "white")};
         font-size: 24px;
+
+        .link-wrapper {
+          .link-description {
+            display: none;
+          }
+        }
+        :hover {
+          .link-description {
+            display: inline;
+          }
+          .fas{
+            display: none
+          }
+
+        }
       }
     }
   }
 `;
 
 const navbarList = (props) => {
-  return <StyledNavbarList pathname={props.pathname}>{props.children}</StyledNavbarList>;
+  return (
+    <StyledNavbarList pathname={props.pathname}>
+      {props.children}
+    </StyledNavbarList>
+  );
 };
 
 export default navbarList;

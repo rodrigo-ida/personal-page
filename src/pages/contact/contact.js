@@ -4,7 +4,7 @@ import Background from "../../components/background/background";
 import Tree from "../../assets/svg/background/tree";
 import Branch from "../../assets/svg/background/treeBranch";
 import Stars from "../../assets/svg/background/stars";
-import Main from '../../components/main/contact/mainContact';
+import Main from "../../components/main/contact/mainContact";
 
 const Projects = () => {
   const backgroundVariants = {
@@ -17,23 +17,25 @@ const Projects = () => {
   const backgroundStyle = {
     width: "100vw",
     height: "100vh",
-    position: 'fixed',
+    position: "fixed",
     display: "flex",
     flexDirection: "column",
     zIndex: -1,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   };
 
   return (
     <Main>
       <motion.div className="motion-div">
-        <Background backgroundStyle={backgroundStyle} backgroundVariants={backgroundVariants}>
+        <Background
+          backgroundStyle={backgroundStyle}
+          backgroundVariants={backgroundVariants}
+        >
           <Branch />
           <FallingStars />
           <Stars />
           <div className="tree-wrapper">
-
-          <Tree />
+            <Tree />
           </div>
         </Background>
         <div className="contact-wrapper">
@@ -44,31 +46,39 @@ const Projects = () => {
               action="https://php.rodrigoida.com.br/contactForm.php"
               method="POST"
             >
-              <input
-                type="text"
-                name="name"
-                className="contact-input name-input"
-                placeholder="Nome"
-              />
-              <input
-                type="mail"
-                name="email"
-                className="contact-input email-input"
-                placeholder="email"
-              />
-              <input
-                type="text"
-                name="subject"
-                className="contact-input subject-input"
-                placeholder="assunto"
-              />
-              <textarea
-                cols="50"
-                name="message"
-                rows="20"
-                className="message-area"
-                placeholder="mensagem"
-              />
+              <div className="name-wrapper">
+                <label className="name-label">Nome</label>
+                <input
+                  type="text"
+                  name="name"
+                  className="contact-input name-input"
+                />
+              </div>
+              <div className="email-wrapper">
+                <label className="name-label">Email</label>
+                <input
+                  type="mail"
+                  name="email"
+                  className="contact-input email-input"
+                />
+              </div>
+              <div className="subject-wrapper">
+                <label className="name-label">Assunto</label>
+                <input
+                  type="text"
+                  name="subject"
+                  className="contact-input subject-input"
+                />
+              </div>
+              <div className="message-wrapper">
+                <label className="name-label">Mensagem</label>
+                <textarea
+                  // cols="50"
+                  name="message"
+                  rows="10"
+                  className="message-area"
+                />
+              </div>
               <input
                 type="submit"
                 name="submit"

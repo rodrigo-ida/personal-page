@@ -33,7 +33,7 @@ const MoonVariants = {
   initial: { x: -1461, y: -728 },
   animate: { x: -1150, y: -310, transition: { duration: 2 } },
   mobileInitial: { x: -2461, y: -728, scale: 0.3 },
-  mobileAnimate: { x: -1043, y: -268, transition: { duration: 2 } },
+  mobileAnimate: { x: -1083, y: -288, transition: { duration: 2 } },
 };
 
 const Moon = () => (

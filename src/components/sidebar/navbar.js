@@ -28,12 +28,19 @@ const Navbar = (props) => {
     return (
       <li className="navbar-list-item" key={i + "navbarLinks"}>
         <NavLink
-          onClick={()=> setclicked(false)}
+          onClick={() => setclicked(false)}
           to={e.url}
           exact
-          activeStyle={{ color: "floralwhite", fontSize: "35px" }}
+          activeStyle={{ color: "floralwhite", fontSize: "25px" }}
         >
-          {clicked ? e.description : <i className={e.fontAwesomeClass}></i>}
+          {clicked ? (
+            e.description
+          ) : (
+            <div className="link-wrapper">
+              <i className={e.fontAwesomeClass}></i>
+              <span className="link-description">{e.description}</span>
+            </div>
+          )}
         </NavLink>
       </li>
     );
@@ -42,15 +49,17 @@ const Navbar = (props) => {
   return (
     <StyledNavbar clicked={clicked} pathname={props.pathname}>
       <div className="logo-wrapper">
-        <Link to="/" className="logo">R</Link>
+        <Link to="/" className="logo">
+          R
+        </Link>
       </div>
       {window.outerWidth > 600 ? (
-        <NavbarList pathname={props.pathname} >{links}</NavbarList>
+        <NavbarList pathname={props.pathname}>{links}</NavbarList>
       ) : (
         <div className="burger-button-wrapper">
           <BurgerButton clicked={clicked} setclicked={setclicked} />
           <NavbarMobileModal clicked={clicked}>
-            <NavbarList >{links}</NavbarList>
+            <NavbarList>{links}</NavbarList>
           </NavbarMobileModal>
         </div>
       )}

@@ -36,7 +36,7 @@ const StyledNavbar = styled.nav`
   }
 
   @media (min-width: 900px) {
-    width: 60px;
+    width: 100px;
     height: 100vh;
     background-color: transparent;
     position: fixed;
