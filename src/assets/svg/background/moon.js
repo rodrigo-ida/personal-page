@@ -9,7 +9,6 @@ to{opacity: 50%}
 `;
 
 const MoonSvg = styled(svgConfig)`
-  @media (min-width: 300px) {
     position: absolute;
     .orbit {
       animation: ${glowing} 3s ease-in-out infinite alternate;
@@ -21,7 +20,7 @@ const MoonSvg = styled(svgConfig)`
       transform-origin: 0 0;
       /* transform-origin: 1048.5px 312.5px; */
     }
-  }
+  
   @media (min-width: 900px) {
     .complete-moon-group {
       transform: translate(-1400px, -700px);
@@ -33,7 +32,7 @@ const MoonVariants = {
   initial: { x: -1461, y: -728 },
   animate: { x: -1150, y: -310, transition: { duration: 2 } },
   mobileInitial: { x: -2461, y: -728, scale: 0.3 },
-  mobileAnimate: { x: -1083, y: -288, transition: { duration: 2 } },
+  mobileAnimate: { x: -1083, y: -288, scale: 0.3, transition: { duration: 2 } },
 };
 
 const Moon = () => (
@@ -44,8 +43,8 @@ const Moon = () => (
       </filter>
     </defs>
     <motion.g
-      initial={`${window.outerWidth > 899 ? "initial" : "mobileInitial"}`}
-      animate={`${window.outerWidth > 899 ? "animate" : "mobileAnimate"}`}
+      initial={`${window.innerWidth > 899 ? "initial" : "mobileInitial"}`}
+      animate={`${window.innerWidth > 899 ? "animate" : "mobileAnimate"}`}
       exit="exit"
       variants={MoonVariants}
       className="complete-moon-group"

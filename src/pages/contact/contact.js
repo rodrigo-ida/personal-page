@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import FallingStars from "../../assets/svg/background/fallingStars";
 import Background from "../../components/background/background";
-import Tree from "../../assets/svg/background/tree";
+// import Tree from "../../assets/svg/background/tree";
 import Branch from "../../assets/svg/background/treeBranch";
 import Stars from "../../assets/svg/background/stars";
 import Main from "../../components/main/contact/mainContact";
@@ -34,9 +34,9 @@ const Projects = () => {
           <Branch />
           <FallingStars />
           <Stars />
-          <div className="tree-wrapper">
+          {/* <div className="tree-wrapper">
             <Tree />
-          </div>
+          </div> */}
         </Background>
         <div className="contact-wrapper">
           <h1 className="title">Contato</h1>

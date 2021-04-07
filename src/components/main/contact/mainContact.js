@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const Main = styled.main`
-  @media (min-width: 300px) {
     overflow-x: hidden;
     height: auto;
+
 
     .motion-div {
       height: 100vh;
@@ -11,6 +11,7 @@ const Main = styled.main`
       display: flex;
 
       flex-direction: column;
+      
     }
 
     .contact-wrapper {
@@ -79,7 +80,7 @@ const Main = styled.main`
         }
       }
     }
-  }
+  
   @media (min-width: 900px) {
     height: 100%;
 

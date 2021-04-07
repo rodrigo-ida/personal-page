@@ -35,7 +35,7 @@ const Projects = () => {
             backgroundStyle={backgroundStyle}
             backgroundVariants={backgroundVariants}
           >
-            <Moon />
+            <Moon className="moon"/>
             <Branch className="Branch" />
             <FallingStars className="FallingStars" />
             <Stars className="Stars" />

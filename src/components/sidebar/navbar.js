@@ -64,7 +64,7 @@ const Navbar = (props) => {
           R
         </Link>
       </div>
-      {!isMobileScreen ? (
+      {!isMobileScreen || window.innerWidth > 600 ? (
         <NavbarList pathname={props.pathname}>{links}</NavbarList>
       ) : (
         <div className="burger-button-wrapper">

@@ -89,7 +89,7 @@ const App = () => {
               <Suspense
                 fallback={
                   <Background
-                    backgroundStyle={backgroundStyle}
+                    // backgroundStyle={backgroundStyle}
                     backgroundVariants={backgroundVariants}
                   >
                     <Branch />

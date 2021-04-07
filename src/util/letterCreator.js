@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 
 const style = {
   display: "inline-block",
-  opacity: 0
+  opacity: 0,
+  color: '#f13311',
+  textShadow: '1px 1px black',
+  padding: '10px 0',
 };
 
 

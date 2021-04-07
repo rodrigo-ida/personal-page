@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
+import {Link} from 'react-router-dom'
 import Main from "../../components/main/home/homeMain";
 import letterCreator from "../../util/letterCreator";
 import Background from "../../components/background/background";
-import Sun from "../../assets/svg/background/sunset";
+// import Sun from "../../assets/svg/background/sunset";
 import Tree from "../../assets/svg/background/tree";
 import Branch from "../../assets/svg/background/treeBranch";
-import Bird from "../../assets/svg/background/flyingBird";
-import NextPageButton from "../../components/nextPageButton/nextPageButton";
+// import Bird from "../../assets/svg/background/flyingBird";
+// import NextPageButton from "../../components/nextPageButton/nextPageButton";
 
 const allLettersWithHover = letterCreator("Desenvolvedor Front End");
 
@@ -53,7 +54,9 @@ const Home = () => {
         exit={{ opacity: 0, transition: { duration: 2 } }}
       >
         <div className="text-wrapper">
-          <h1 className="name">
+            {/* <div className="name"> */}
+          <div className="name">
+
             <span className="first-line">
               <span>
                 <span className="letter-r">R</span>odrigo
@@ -61,11 +64,17 @@ const Home = () => {
               <span className="last-name">Ida</span>
             </span>
             <span className="second-line">{allLettersWithHover}</span>
-          </h1>
-        </div>
+            <Link to="/projects">
+
+          <button className="cta-btn" >Acesse o portfólio</button>
+            </Link>
+          </div>
+          </div>
+
+        {/* </div> */}
       </motion.div>
 
-      <NextPageButton url="/projects" />
+      {/* <NextPageButton url="/projects" /> */}
     </Main>
   );
 };

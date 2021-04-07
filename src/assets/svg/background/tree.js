@@ -9,6 +9,11 @@ const TreeContainer = styled.div`
   align-self: center;
   width: 80%;
   max-width: 400px;
+
+  @media( min-width: 1400px){
+    max-width: 590px;
+
+  }
 `;
 
 const Tree1 = styled(svgConfig)`
