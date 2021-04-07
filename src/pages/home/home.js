@@ -33,7 +33,7 @@ const Home = () => {
     position: "fixed",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
   };
 
   return (
@@ -44,8 +44,8 @@ const Home = () => {
       >
         <Branch />
         <Tree />
-        <Sun />
-        <Bird />
+        {/* <Sun /> */}
+        {/* <Bird /> */}
       </Background>
       <motion.div
         className="motion-div"

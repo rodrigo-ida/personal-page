@@ -8,6 +8,17 @@ import BurgerButton from "./mobileNavbar/burgerButton/BurgerBtn";
 
 const Navbar = (props) => {
   const [clicked, setclicked] = useState(false);
+  const [isMobileScreen, setIsMobileScreen] = useState(true);
+
+  window.addEventListener("resize", (e) => {
+    if(window.innerWidth > 600){
+
+      setIsMobileScreen(false);
+    }
+    else{
+      setIsMobileScreen(true);
+    }
+  });
 
   const linksArray = [
     { url: "/", fontAwesomeClass: "fas fa-home", description: "Início" },
@@ -53,7 +64,7 @@ const Navbar = (props) => {
           R
         </Link>
       </div>
-      {window.outerWidth > 600 ? (
+      {!isMobileScreen ? (
         <NavbarList pathname={props.pathname}>{links}</NavbarList>
       ) : (
         <div className="burger-button-wrapper">

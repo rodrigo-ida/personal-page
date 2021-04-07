@@ -1,30 +1,58 @@
 import styled from "styled-components";
 import svgConfig from "../../../util/genericSvgConfig";
 
+
+const BranchContainer = styled.div`
+
+width: min-content;
+/* transform: translate(-22%, -20%); */
+margin-left: -9vw;
+    margin-top: -4vw;
+    position: absolute;
+    min-width: 280px;
+    width: 30vw;
+
+    @media (max-width: 600px){
+      margin-left: -17vw;
+
+    }
+
+
+
+
+`
+
 const Tree1 = styled(svgConfig)`
-  @media (min-width: 300px) {
-    width: 100%;
-    height: 50%;
+    /* width: 100%;
+     */
     /* margin: -15% 0 0 -33%; */
-    margin: -28% 0 0 -43%;
+    /* margin: -28% 0 0 -43%; */
+
 
 
     z-index: 5;  //projects page moon hiding
 
+    width: 100%;
+    height: 100%;
+
     
-  }
+  
   
   @media (min-width: 900px) {
     
-    margin: -5% 0 0 -14%;
+    /* margin: -5% 0 0 -14%;
     height: 56%;
-    width: 50%;
+    width: 50%; */
 
     
   }
 `;
 
 const Tree = () => (
+
+  <BranchContainer 
+  className="branch-container"
+  >
   <Tree1
     className="branch-svg"
     version="1.0"
@@ -851,6 +879,8 @@ m88 -58 c0 -9 -10 -19 -22 -24 -43 -16 -68 12 -25 29 33 13 47 12 47 -5z"
       />
     </g>
   </Tree1>
+  </BranchContainer>
+
 );
 
 export default Tree;

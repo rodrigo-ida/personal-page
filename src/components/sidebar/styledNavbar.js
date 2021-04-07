@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledNavbar = styled.nav`
-  @media (min-width: 300px) {
     width: 100vw;
     height: ${props => props.clicked ? '100vh' : '10vh'};
     padding: 15px;
@@ -33,9 +32,9 @@ const StyledNavbar = styled.nav`
     }
 
  
-  }
+  
 
-  @media (min-width: 900px) {
+  @media (min-width: 600px) {
     width: 100px;
     height: 100vh;
     background-color: transparent;
@@ -52,6 +51,10 @@ const StyledNavbar = styled.nav`
         text-align: center;
         color: black;
       }
+    }
+
+    .burger-button-wrapper{
+      display: none;
     }
 
     

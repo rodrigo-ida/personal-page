@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const StyledNavbarList = styled.ul`
-  @media (min-width: 300px) {
     list-style: none;
     padding: 40px 0;
     height: 70%;
@@ -18,9 +17,9 @@ const StyledNavbarList = styled.ul`
         text-decoration: none;
       }
     }
-  }
+  
 
-  @media (min-width: 900px) {
+  @media (min-width: 600px) {
     list-style: none;
     padding: 100px 10px;
     height: 100%;
