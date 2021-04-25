@@ -42,7 +42,7 @@ const Navbar = (props) => {
           onClick={() => setclicked(false)}
           to={e.url}
           exact
-          activeStyle={{ color: "floralwhite", fontSize: "25px" }}
+          activeStyle={{ color: "floralwhite" }}
         >
           {clicked ? (
             e.description

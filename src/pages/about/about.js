@@ -148,7 +148,7 @@ const About = () => {
                   <p className="skills-text">
                     Atualmente, estudo Análise e Desenvolvimento de Sistemas no
                     Centro Universitário das Faculdades Metropolitanas Unidas
-                    (FMU) e busco uma vaga como desenvolvedor web Jr.
+                    (FMU) e sou desenvolvedor jr na agência <a href="www.otimaideia.com.br">Ótima Ideia</a>.
                   </p>
 
                   <p className="skills-text">

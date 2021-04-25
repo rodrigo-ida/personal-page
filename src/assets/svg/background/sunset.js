@@ -6,6 +6,11 @@ const SunContainer = styled.div`
   width: 100px;
   height: 200px;
   background: blue;
+  position: absolute;
+    top: 100%;
+    left: 100%;
+    z-index: -1;
+
 `;
 
 const glowing = keyframes`
@@ -15,7 +20,7 @@ to{opacity: 20%}
 `;
 
 const SunSvg = styled(svgConfig)`
-  @media (min-width: 300px) {
+
     /* position: absolute;
     z-index: -1;
     top: 673px;
@@ -27,16 +32,7 @@ const SunSvg = styled(svgConfig)`
     /* z-index: -1; */
     /* top: 0px; */
     /* left: 0px; */
-    /* -webkit-transform: translate(-1090px,-60px);
-    -ms-transform: translate(-1090px,-60px);
-    transform: translate(0px,0px);
-    overflow: hidden;
-    width: 100%;
-    height: 60%; */
-    /* 
-    position: absolute;
-    transform: translate(128px,410px) scale(0.3); */
-
+    
     g{
       transform: scale(-0.5);
 
@@ -45,13 +41,18 @@ const SunSvg = styled(svgConfig)`
     .orbit {
       animation: ${glowing} 3s ease-in-out infinite alternate;
     }
-  }
+  
   @media (min-width: 900px) {
     /* position: absolute;
     z-index: 0;
     top: 673px;
     left: 1308px;
     transform: translate(0px, 0px); */
+        
+    g{
+      transform: scale(1);
+
+    }
   }
 `;
 

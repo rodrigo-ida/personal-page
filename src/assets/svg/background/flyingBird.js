@@ -54,9 +54,11 @@ const singleBirdGenerator = (initialX, finalX, yTransitions, delay, key) => {
 const manyBirdsGenerator = (quantity) => {
   let allBirds = [];
 
+  console.log(window.innerWidth);
+
   for (let i = 0; i < quantity; i++) {
     let initialX = getRandomInit(-400, -300);
-    let finalx = getRandomInit(1500, 2000);
+    let finalx = window.innerWidth + 500;
     let yArray = [
       getRandomInit(-300, 500),
       getRandomInit(-300, 300),

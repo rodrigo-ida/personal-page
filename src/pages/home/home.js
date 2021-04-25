@@ -3,11 +3,10 @@ import {Link} from 'react-router-dom'
 import Main from "../../components/main/home/homeMain";
 import letterCreator from "../../util/letterCreator";
 import Background from "../../components/background/background";
-// import Sun from "../../assets/svg/background/sunset";
+import Sun from "../../assets/svg/background/sunset";
 import Tree from "../../assets/svg/background/tree";
 import Branch from "../../assets/svg/background/treeBranch";
-// import Bird from "../../assets/svg/background/flyingBird";
-// import NextPageButton from "../../components/nextPageButton/nextPageButton";
+import Bird from "../../assets/svg/background/flyingBird";
 
 const allLettersWithHover = letterCreator("Desenvolvedor Front End");
 
@@ -45,8 +44,8 @@ const Home = () => {
       >
         <Branch />
         <Tree />
-        {/* <Sun /> */}
-        {/* <Bird /> */}
+        <Sun />
+        <Bird />
       </Background>
       <motion.div
         className="motion-div"
