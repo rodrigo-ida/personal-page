@@ -45,7 +45,7 @@ const Home = () => {
         <Branch />
         <Tree />
         <Sun />
-        <Bird />
+        {/* <Bird /> */}
       </Background>
       <motion.div
         className="motion-div"

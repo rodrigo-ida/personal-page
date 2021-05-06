@@ -8,15 +8,18 @@ import Background from "./components/background/background";
 import Branch from "./assets/svg/background/treeBranch";
 import Tree from "./assets/svg/background/tree";
 import { AnimatePresence } from "framer-motion";
+import Projects from "./pages/projects/projects"
+import About from "./pages/about/about"
+import Contact from "./pages/contact/contact"
 
-const projectPromise = import("./pages/projects/projects");
-const Projects = lazy(() => projectPromise);
+// const projectPromise = import("./pages/projects/projects");
+// const Projects = lazy(() => projectPromise);
 
-const aboutPromise = import("./pages/about/about");
-const About = lazy(() => aboutPromise);
+// const aboutPromise = import("./pages/about/about");
+// const About = lazy(() => aboutPromise);
 
-const contactPromise = import("./pages/contact/contact");
-const Contact = lazy(() => contactPromise);
+// const contactPromise = import("./pages/contact/contact");
+// const Contact = lazy(() => contactPromise);
 
 const StyledApp = styled.div`
   width: 100%;
@@ -55,51 +58,9 @@ const App = () => {
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
             <Route path="/" component={Home} exact />
-            <Route path="/projects" exact>
-              <Suspense
-                fallback={
-                  <Background
-                    backgroundStyle={backgroundStyle}
-                    backgroundVariants={backgroundVariants}
-                  >
-                    <Branch />
-                    <Tree />
-                  </Background>
-                }
-              >
-                <Projects />
-              </Suspense>
-            </Route>
-            <Route path="/about" exact>
-              <Suspense
-                fallback={
-                  <Background
-                    backgroundStyle={backgroundStyle}
-                    backgroundVariants={backgroundVariants}
-                  >
-                    <Branch />
-                    <Tree />
-                  </Background>
-                }
-              >
-                <About />
-              </Suspense>
-            </Route>
-            <Route path="/contact">
-              <Suspense
-                fallback={
-                  <Background
-                    // backgroundStyle={backgroundStyle}
-                    backgroundVariants={backgroundVariants}
-                  >
-                    <Branch />
-                    <Tree />
-                  </Background>
-                }
-              >
-                <Contact />
-              </Suspense>
-            </Route>
+            <Route path="/projects" exact component={Projects}/>
+            <Route path="/about" exact component={About}/>
+            <Route path="/contact" component={Contact}/>
             <Redirect from="/" to="/" />
           </Switch>
         </AnimatePresence>
